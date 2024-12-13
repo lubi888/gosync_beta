@@ -49,8 +49,12 @@ class GoSyncNavDrawer extends StatelessWidget {
     // Scaffold.of(context).openDrawer();
     return Drawer(
         width: 400.0,
-        backgroundColor: Colors.black,
+        // elevation: 50.0,
+        // backgroundColor: Colors.black,
+        // shadowColor: Colors.redAccent,
+        // shape: ,
         // child: SafeArea(
+        semanticLabel: 'drawer',
         child: ListView(
             // child: Column(
             children: [

@@ -333,11 +333,51 @@ class $AssetsImagesGen {
       ];
 }
 
+class $AssetsThemesGen {
+  const $AssetsThemesGen();
+
+  /// File path: assets/themes/appainter_theme.json
+  String get appainterTheme => 'assets/themes/appainter_theme.json';
+
+  /// File path: assets/themes/appainter_theme3.json
+  String get appainterTheme3 => 'assets/themes/appainter_theme3.json';
+
+  /// File path: assets/themes/appainter_theme_dark.json
+  String get appainterThemeDark => 'assets/themes/appainter_theme_dark.json';
+
+  /// File path: assets/themes/appainter_theme_dark_green.json
+  String get appainterThemeDarkGreen =>
+      'assets/themes/appainter_theme_dark_green.json';
+
+  /// File path: assets/themes/appainter_theme_dark_green2.json
+  String get appainterThemeDarkGreen2 =>
+      'assets/themes/appainter_theme_dark_green2.json';
+
+  /// File path: assets/themes/appainter_theme_green.json
+  String get appainterThemeGreen => 'assets/themes/appainter_theme_green.json';
+
+  /// File path: assets/themes/appainter_theme_seed_mint.json
+  String get appainterThemeSeedMint =>
+      'assets/themes/appainter_theme_seed_mint.json';
+
+  /// List of all assets
+  List<String> get values => [
+        appainterTheme,
+        appainterTheme3,
+        appainterThemeDark,
+        appainterThemeDarkGreen,
+        appainterThemeDarkGreen2,
+        appainterThemeGreen,
+        appainterThemeSeedMint
+      ];
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsThemesGen themes = $AssetsThemesGen();
 }
 
 class AssetGenImage {
