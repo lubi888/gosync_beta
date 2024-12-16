@@ -11,7 +11,6 @@ import './gosync_appbar.dart';
 import './gosync_navdrawer.dart';
 import './gosync_home.dart';
 import './gosync_text.dart';
-import './gosync_about.dart';
 import './gosync_scrollbar0.dart';
 import './gosync_scrollbar1.dart';
 import './gosync_scrollbar2.dart';
@@ -20,6 +19,7 @@ import './gosync_apple_install.dart';
 import './gosync_linux_install.dart';
 import './gosync_uninstall.dart';
 import './gosync_urllinks.dart';
+
 
 
 // import 'package:json_theme/json_theme.dart';
@@ -50,7 +50,7 @@ class GoSyncNavDrawer extends StatelessWidget {
     return Drawer(
         width: 400.0,
         // elevation: 50.0,
-        // backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         // shadowColor: Colors.redAccent,
         // shape: ,
         // child: SafeArea(
@@ -516,7 +516,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                       onTap: () {
                         // Navigator.of(context).pop();
                         // _launchYouTube();
-                        Navigator.pushNamed(context, '/uninstall');
+                        Navigator.pushNamed(context, '/unInstall');
                       }),
                 ],
               ),

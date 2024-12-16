@@ -10,7 +10,6 @@ import './gosync_appbar.dart';
 import './gosync_navdrawer.dart';
 import './gosync_home.dart';
 import './gosync_text.dart';
-import './gosync_about.dart';
 import './gosync_scrollbar0.dart';
 import './gosync_scrollbar1.dart';
 import './gosync_scrollbar2.dart';
@@ -56,14 +55,19 @@ class GoSync extends StatelessWidget {
       // ),
       initialRoute: '/',
       routes: {
-        // '/': (context) => const MaterialApp(),
         '/home': (BuildContext context) => const GoSyncHome(title: goSyncTitle),
         '/about': (BuildContext context) => const GoSyncAbout(),
+        '/appbar' : (BuildContext context) => const GoSyncAppBar(),
+        '/navdrawer': (BuildContext context) => const GoSyncNavDrawer(),
         '/scrollbar0': (BuildContext context) => const GoSyncScrollbar0(),
         '/scrollbar1': (BuildContext context) => const GoSyncScrollbar1(),
         '/scrollbar2': (BuildContext context) => const GoSyncScrollbar2(),
-        '/navdrawer': (BuildContext context) => const GoSyncNavDrawer(),
-        '/appbar' : (BuildContext context) => const GoSyncAppBar(),
+        '/windowsInstall': (BuildContext context) => const GoSyncWindowsInstall(),
+        '/appleInstall': (BuildContext context) => const GoSyncAppleInstall(),
+        '/linuxInstall': (BuildContext context) => const GoSyncLinuxInstall(),
+        '/unInstall': (BuildContext context) => const GoSyncUninstall(),
+        // '/text': (BuildContext context) => const GoSyncText(),
+        // '/urlLinks': (BuildContext context) => const GoSyncUrlLinks(),
       },
       localizationsDelegates: const [
         AppLocalizations.delegate,
