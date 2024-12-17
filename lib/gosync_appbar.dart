@@ -65,18 +65,18 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
       tabs: <Widget>[
             Tab(
                 icon: const Icon(
-                  Icons.home,
+                  Icons.code,
                   // color: Colors.redAccent
                 ),
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
                       // home
-                      AppLocalizations.of(context)!.home),
+                      AppLocalizations.of(context)!.golangInstall),
                 )),
             Tab(
                 icon: const Icon(
-                  Icons.code,
+                  Icons.home,
                   // color: Colors.orangeAccent
                 ),
                 height: 90.0,
@@ -84,7 +84,7 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
                   alignment: Alignment.center,
                   child: Text(
                       // gocode
-                      AppLocalizations.of(context)!.golangInstall),
+                      AppLocalizations.of(context)!.home),
                   // install golang and geth
                 )),
             Tab(

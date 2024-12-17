@@ -174,6 +174,233 @@ class GoSyncScrollbar0 extends StatelessWidget {
                     }),
               ],
             ),
+            // expansion tile 2
+            ExpansionTile(
+              title: const Text(
+                "go installation levels",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.yellow),
+              ),
+              // leading: Icon(Icons.person), //add icon
+              leading: const Icon(
+                Icons.school,
+                // FontAwesomeIcons.googleScholar,
+                color: Colors.red,
+              ),
+              childrenPadding: const EdgeInsets.only(
+                  left: 20), //children padding origianlly 60
+              children: [
+                // Divider(color: Colors.grey.shade400, indent: 72.0, height: 1.0),
+                ListTile(
+                    leading: const Icon(
+                      // Icons.tv,
+                      FontAwesomeIcons.windows,
+                      color: Colors.lightBlue,
+                    ),
+                    title: const Text(
+                      // 'add eth|etc address - acccount',
+                      'windows basic go install using gorretct directory structure && setting environment variables.',
+                      // AppLocalizations.of(context)!.visitGoDevPlay,
+                      style: TextStyle(color: Colors.yellow),
+                    ),
+                    subtitle: const Text(
+                      // 'https://play.golang.com/',
+                      'windows go install windows basic go install using gorretct directory structure && setting environment variables.golang',
+                      // https://go.dev/play/
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: Colors.green),
+                    ),
+                    // isThreeLine: true,
+                    trailing: const Icon(FontAwesomeIcons.windows,
+                        color: Colors.lightGreen),
+                    onTap: () {
+                      // Navigator.of(context).pop();
+                      // _launchYouTube();
+                      Navigator.pushNamed(context, '/scrollbar0');
+                    }),
+                ListTile(
+                    leading: const Icon(
+                      // Icons.tv,
+                      FontAwesomeIcons.apple,
+                      color: Colors.grey,
+                    ),
+                    title: const Text(
+                      // 'add eth|etc address - acccount',
+                      'container Install & collaborative goup coding',
+                      // AppLocalizations.of(context)!.visitGoDevPlay,
+                      style: TextStyle(color: Colors.lightBlue),
+                    ),
+                    subtitle: const Text(
+                      // 'https://play.golang.com/',
+                      'docker & kubernetes container go production & github hookup ',
+                      // https://go.dev/play/
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: Colors.yellow),
+                    ),
+                    trailing: const Icon(FontAwesomeIcons.apple,
+                        color: Colors.blueGrey),
+                    onTap: () {
+                      // Navigator.of(context).pop();
+                      // _launchYouTube();
+                      Navigator.pushNamed(context, '/scrollbar1');
+                    }),
+                // list tile 5 deep link youtube
+                ListTile(
+                    leading: const Icon(
+                      // Icons.tv,
+                      FontAwesomeIcons.linux,
+                      color: Colors.red,
+                    ),
+                    title: const Text(
+                      // 'add eth|etc address - acccount',
+                      'go pro. production professional environment',
+                      // AppLocalizations.of(context)!.visitGoDevPlay,
+                      style: TextStyle(color: Colors.lightBlue),
+                    ),
+                    subtitle: const Text(
+                      // 'https://play.golang.com/',
+                      'professional go production environment',
+                      // https://go.dev/play/
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: Colors.yellow),
+                    ),
+                    trailing: const Icon(FontAwesomeIcons.linux,
+                        color: Colors.blue),
+                    onTap: () {
+                      // Navigator.of(context).pop();
+                      // _launchYouTube();
+                      Navigator.pushNamed(context, '/scrollbar2');
+                    }),
+                // const Padding(
+                //   padding: EdgeInsets.all(16.0),
+                //   child: Text('==== Official Website ====',
+                //       textAlign: TextAlign.center,
+                //       style: TextStyle(color: Colors.redAccent)),
+                // ),
+              ],
+            ),
+            // exapnsion tile 3
+            ExpansionTile(
+              title: const Text(
+                "go IDEs",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.yellow),
+              ),
+              // leading: Icon(Icons.person), //add icon
+              leading: const Icon(
+                Icons.integration_instructions_outlined,
+                // FontAwesomeIcons.googleScholar,
+                color: Colors.yellow,
+              ),
+              childrenPadding: const EdgeInsets.only(
+                  left: 20), //children padding origianlly 60
+              children: [
+                // Divider(color: Colors.grey.shade400, indent: 72.0, height: 1.0),
+                ListTile(
+                    leading: const Icon(
+                      // Icons.tv,
+                      FontAwesomeIcons.windows,
+                      color: Colors.lightBlue,
+                    ),
+                    title: const Text(
+                      // 'add eth|etc address - acccount',
+                      'visit Visual Studio Code.',
+                      // AppLocalizations.of(context)!.visitGoDevPlay,
+                      style: TextStyle(color: Colors.yellow),
+                    ),
+                    subtitle: const Text(
+                      // 'https://play.golang.com/',
+                      'fast, open source and just add golang extension',
+                      // https://go.dev/play/
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: Colors.green),
+                    ),
+                    // isThreeLine: true,
+                    trailing: const Icon(FontAwesomeIcons.windows,
+                        color: Colors.lightGreen),
+                    onTap: () {
+                      // Navigator.of(context).pop();
+                      // _launchVisualStudioCode();
+                    }),
+                ListTile(
+                    leading: const Icon(
+                      // Icons.tv,
+                      FontAwesomeIcons.codeFork,
+                      color: Colors.grey,
+                    ),
+                    title: const Text(
+                      // 'add eth|etc address - acccount',
+                      'visit Jetbrains GoLand',
+                      // AppLocalizations.of(context)!.visitGoDevPlay,
+                      style: TextStyle(color: Colors.lightBlue),
+                    ),
+                    subtitle: const Text(
+                      // 'https://play.golang.com/',
+                      'professional IDE try for free. Pro version about \$300 per annum ',
+                      // https://go.dev/play/
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: Colors.yellow),
+                    ),
+                    trailing: const Icon(FontAwesomeIcons.desktop,
+                        color: Colors.blueGrey),
+                    onTap: () {
+                      // Navigator.of(context).pop();
+                      // _launchJetbrainsGoLand();
+                    }),
+                // list tile 5 deep link youtube
+                ListTile(
+                    leading: const Icon(
+                      // Icons.tv,
+                      FontAwesomeIcons.linux,
+                      color: Colors.red,
+                    ),
+                    title: const Text(
+                      // 'add eth|etc address - acccount',
+                      'visit VIm Golang',
+                      // AppLocalizations.of(context)!.visitGoDevPlay,
+                      style: TextStyle(color: Colors.lightBlue),
+                    ),
+                    subtitle: const Text(
+                      // 'https://play.golang.com/',
+                      'stalworth vim plugin',
+                      // https://go.dev/play/
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: Colors.yellow),
+                    ),
+                    trailing: const Icon(FontAwesomeIcons.windows,
+                        color: Colors.blue),
+                    onTap: () {
+                      // Navigator.of(context).pop();
+                      // _launchVimGo();
+                    }),
+                ListTile(
+                    leading: const Icon(
+                      // Icons.tv,
+                      FontAwesomeIcons.codeBranch,
+                      color: Colors.yellow,
+                    ),
+                    title: const Text(
+                      // 'add eth|etc address - acccount',
+                      'visit LiteIDE',
+                      // AppLocalizations.of(context)!.visitGoDevPlay,
+                      style: TextStyle(color: Colors.purple),
+                    ),
+                    subtitle: const Text(
+                      // 'https://play.golang.com/',
+                      'advanced IDE code editor',
+                      // https://go.dev/play/
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: Colors.yellow),
+                    ),
+                    trailing: const Icon(FontAwesomeIcons.desktop,
+                        color: Colors.red),
+                    onTap: () {
+                      // Navigator.of(context).pop();
+                      // _launchLiteIDE();
+                    }),
+              ],
+            ),
+
             Text(
               '\nInstall Golang and GoEth Geth bare bones \n primaryTextTheme.headlineLarge\n',
               textAlign: TextAlign.center,

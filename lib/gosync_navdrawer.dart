@@ -636,7 +636,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                           color: Colors.red),
                       onTap: () {
                         // Navigator.of(context).pop();
-                        _launchLiteIDE();
+                        // _launchLiteIDE();
                       }),
                 ],
               ),
