@@ -17,7 +17,11 @@ import './gosync_windows_install.dart';
 import './gosync_apple_install.dart';
 import './gosync_linux_install.dart';
 import './gosync_uninstall.dart';
-import './gosync_urllinks.dart';
+import './gosync_install_primary.dart';
+import './gosync_install_secondary.dart';
+import './gosync_install_tertiary.dart';
+// import './gosync_urllinks.dart';
+
 
 void main() {
   runApp(const GoSync());
@@ -66,6 +70,9 @@ class GoSync extends StatelessWidget {
         '/appleInstall': (BuildContext context) => const GoSyncAppleInstall(),
         '/linuxInstall': (BuildContext context) => const GoSyncLinuxInstall(),
         '/unInstall': (BuildContext context) => const GoSyncUninstall(),
+        '/install_primary': (BuildContext context) => const GoSyncInstallPrimary(),
+        '/install_secondary': (BuildContext context) => const GoSyncInstallSecondary(),
+        '/install_tertiary': (BuildContext context) => const GoSyncInstallTertiary(),
         // '/text': (BuildContext context) => const GoSyncText(),
         // '/urlLinks': (BuildContext context) => const GoSyncUrlLinks(),
       },

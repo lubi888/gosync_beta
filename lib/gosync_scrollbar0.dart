@@ -174,8 +174,9 @@ class GoSyncScrollbar0 extends StatelessWidget {
                     }),
               ],
             ),
-            // expansion tile 2
+            // expansion tile 2 install levels
             ExpansionTile(
+              initiallyExpanded: true,
               title: const Text(
                 "go installation levels",
                 textAlign: TextAlign.center,
@@ -216,7 +217,7 @@ class GoSyncScrollbar0 extends StatelessWidget {
                     onTap: () {
                       // Navigator.of(context).pop();
                       // _launchYouTube();
-                      Navigator.pushNamed(context, '/scrollbar0');
+                      Navigator.pushNamed(context, '/install_primary');
                     }),
                 ListTile(
                     leading: const Icon(
@@ -242,7 +243,7 @@ class GoSyncScrollbar0 extends StatelessWidget {
                     onTap: () {
                       // Navigator.of(context).pop();
                       // _launchYouTube();
-                      Navigator.pushNamed(context, '/scrollbar1');
+                      Navigator.pushNamed(context, '/install_secondary');
                     }),
                 // list tile 5 deep link youtube
                 ListTile(
@@ -269,7 +270,7 @@ class GoSyncScrollbar0 extends StatelessWidget {
                     onTap: () {
                       // Navigator.of(context).pop();
                       // _launchYouTube();
-                      Navigator.pushNamed(context, '/scrollbar2');
+                      Navigator.pushNamed(context, '/install_tertiary');
                     }),
                 // const Padding(
                 //   padding: EdgeInsets.all(16.0),
