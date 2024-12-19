@@ -1,5 +1,9 @@
 {
-  "title": "goSync.go 241218",
+  "titledate": "goSync.go 241219",
+  "@titledate": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "title": "goSync",
   "@title": {
     "description": "The conventional newborn programmer greeting"
   },
@@ -19,7 +23,7 @@
   "@goSyncHeading": {
     "description": "headliners"
   },
-  "danger": "dangr AI",
+  "danger": "danger AI",
   "@danger": {
     "description": "danger"
   },

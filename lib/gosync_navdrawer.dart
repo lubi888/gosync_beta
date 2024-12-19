@@ -902,6 +902,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ],
               ),
               ExpansionTile(
+                initiallyExpanded: true,
                 title: const Text(
                   "socials",
                   textAlign: TextAlign.center,
@@ -974,7 +975,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   // list tile 5 deep link Mastodon
                   ListTile(
                       leading: const Icon(FontAwesomeIcons.mastodon,
-                          color: Colors.lightBlue),
+                          color: Colors.greenAccent),
                       title: const Text(
                         // 'add eth|etc address - acccount',
                         'visit Mastodon @golang hash tag',
@@ -987,7 +988,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                         'general hash tag for go programmers chatting',
                         // https://go.dev/play/
                         style: TextStyle(
-                            fontStyle: FontStyle.italic, color: Colors.red),
+                            fontStyle: FontStyle.italic, color: Colors.cyan),
                       ),
                       trailing: const Icon(
                         FontAwesomeIcons.mastodon,
@@ -996,6 +997,71 @@ class GoSyncNavDrawer extends StatelessWidget {
                       onTap: () {
                         // Navigator.of(context).pop();
                         _launchMastodonGo();
+                        //   launch deep linking youtube.
+                      }),
+                  // list tile 65 deep link blue sky
+                  ListTile(
+                      leading: const Icon(FontAwesomeIcons.bluesky,
+                          color: Colors.yellowAccent,
+                        // Icons.alternate_email_rounded,
+                        // Icons.flutter_dash,
+                        // color: Colors.lightBlue,
+                      ),
+                      title: const Text(
+                        // 'add eth|etc address - acccount',
+                        'visit blue Sky @golang 4k subscribers',
+                        // visitGoPlayground,
+                        // AppLocalizations.of(context)!.visitGoDevPlay,
+                        style: TextStyle(color: Colors.red),
+                      ),
+                      subtitle: const Text(
+                        // 'https://play.golang.com/',
+                        'deep link to Blue Sky social',
+                        // https://go.dev/play/
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic, color: Colors.purple),
+                      ),
+                      trailing: const Icon(
+                        FontAwesomeIcons.bluesky,
+                        color: Colors.orange,
+                      ),
+                      onTap: () {
+                        // launch bluesky social
+                        // Navigator.of(context).pop();
+                        // _launchTwitterGolang();
+                        _launchBlueSkyGo();
+                        //   launch deep linking youtube.
+                      }),
+                  // list tile 7 deep link Truth Social
+                  ListTile(
+                      leading: const Icon(FontAwesomeIcons.facebook,
+                          color: Colors.yellowAccent
+                        // Icons.alternate_email_rounded,
+                        // Icons.flutter_dash,
+                        // color: Colors.lightBlue,
+                      ),
+                      title: const Text(
+                        // 'add eth|etc address - acccount',
+                        'visit Facebook @golang 7k subscribers',
+                        // visitGoPlayground,
+                        // AppLocalizations.of(context)!.visitGoDevPlay,
+                        style: TextStyle(color: Colors.green),
+                      ),
+                      subtitle: const Text(
+                        // 'https://play.golang.com/',
+                        'deep link to FBook',
+                        // https://go.dev/play/
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic, color: Colors.pinkAccent),
+                      ),
+                      trailing: const Icon(
+                        FontAwesomeIcons.facebookF,
+                        color: Colors.blueGrey,
+                      ),
+                      onTap: () {
+                        // laucch truth social
+                        // Navigator.of(context).pop();
+                        _launchFacebookGo();
                         //   launch deep linking youtube.
                       }),
                   ListTile(
@@ -2091,6 +2157,29 @@ Future<void> _launchMastodonGo() async {
   print(TimeOfDay.now());
   if (!await launchUrl(_urlMastodonGo)) {
     throw Exception('Could not launch $_urlMastodonGo');
+  }
+}
+
+// _launchBlueSkyGo();
+// launch mastodon golang
+final Uri _urlBlueSkyGo = Uri.parse('https://bsky.app/profile/golang.org');
+
+Future<void> _launchBlueSkyGo() async {
+  debugPrint("customer left app to Blue Sky social  at");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlBlueSkyGo)) {
+    throw Exception('Could not launch $_urlBlueSkyGo');
+  }
+}
+
+// launch mastodon golang
+final Uri _urlFacebookGo = Uri.parse('https://www.facebook.com/groups/golanggonuts');
+
+Future<void> _launchFacebookGo() async {
+  debugPrint("customer left app to Facebook social at");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlFacebookGo)) {
+    throw Exception('Could not launch $_urlFacebookGo');
   }
 }
 

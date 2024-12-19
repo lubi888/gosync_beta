@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:gosync_beta/gosync_text.dart';
 import 'package:intl/intl.dart';
 
 // //   // appBar: AppBar(
@@ -35,7 +36,6 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
     //       // gosyncscrollbar2(),
     //     ]);
 
-
     debugPrint("ethsync appbar loaded");
     print(TimeOfDay.now());
 
@@ -49,7 +49,7 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
       // elevation/: 30.0,
       title: Text(
         // goSyncTitle,
-        AppLocalizations.of(context)!.title,
+        AppLocalizations.of(context)!.titledate,
         textAlign: TextAlign.center,
         style: const TextStyle(
           // backgroundColor: Color.fromARGB(255, 207, 160, 17),
@@ -60,9 +60,9 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       bottom: TabBar(
-        // controller: TabController(length: 3, vsync: vsync)
+          // controller: TabController(length: 3, vsync: vsync)
           // ScrollController scrollbarController = ScrollController();
-      tabs: <Widget>[
+          tabs: <Widget>[
             Tab(
                 icon: const Icon(
                   Icons.code,
@@ -76,7 +76,7 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
                 )),
             Tab(
                 icon: const Icon(
-                  Icons.home,
+                  Icons.signal_wifi_4_bar_outlined,
                   // color: Colors.orangeAccent
                 ),
                 height: 90.0,
@@ -84,12 +84,14 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
                   alignment: Alignment.center,
                   child: Text(
                       // gocode
-                      AppLocalizations.of(context)!.home),
+                      // goSyncTitle,
+                      // "sosync";
+                      AppLocalizations.of(context)!.title),
                   // install golang and geth
                 )),
             Tab(
                 icon: const Icon(
-                  Icons.laptop,
+                  Icons.android,
                   // color: Colors.greenAccent
                 ),
                 child: Align(
