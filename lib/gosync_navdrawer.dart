@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
 import './main.dart';
@@ -19,8 +20,6 @@ import './gosync_apple_install.dart';
 import './gosync_linux_install.dart';
 import './gosync_uninstall.dart';
 import './gosync_urllinks.dart';
-
-
 
 // import 'package:json_theme/json_theme.dart';
 // import 'package:gosync/gosync_text.dart';
@@ -306,7 +305,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   color: Colors.green,
                 ), //add icon
                 childrenPadding:
-                const EdgeInsets.only(left: 30), //children padding
+                    const EdgeInsets.only(left: 30), //children padding
                 children: [
                   ListTile(
                       leading: const Icon(
@@ -414,6 +413,49 @@ class GoSyncNavDrawer extends StatelessWidget {
                         // _launchYouTube();
                         Navigator.pushNamed(context, '/unInstall');
                       }),
+                ],
+              ),
+              ExpansionTile(
+                title: const Text(
+                  "go commands",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.red),
+                ),
+                leading: const Icon(
+                  FontAwesomeIcons.laptopCode,
+                  color: Colors.blue,
+                ), //add icon
+                childrenPadding:
+                    const EdgeInsets.only(left: 30), //children padding
+                children: [
+                  ListTile(
+                      leading: const Icon(
+                        // Icons.tv,
+                        FontAwesomeIcons.code,
+                        color: Colors.pink,
+                      ),
+                      title: const Text(
+                        // 'add eth|etc address - acccount',
+                        'go cli common commands',
+                        // AppLocalizations.of(context)!.visitGoDevPlay,
+                        style: TextStyle(color: Colors.teal),
+                      ),
+                      subtitle: const Text(
+                        // 'https://play.golang.com/',
+                        'cli command line interface',
+                        // https://go.dev/play/
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic, color: Colors.pink),
+                      ),
+                      trailing: const Icon(FontAwesomeIcons.codeCompare,
+                          color: Colors.green),
+                      onTap: () {
+                        // Navigator.of(context).pop();
+                        // _launchYouTube();
+                        _launchGoCommands();
+                      }),
+                  // list tile 5 deep link XTwitter
+                  // list tile 5 deep link youtube
                 ],
               ),
               // expansion tile install levels
@@ -642,49 +684,6 @@ class GoSyncNavDrawer extends StatelessWidget {
                       }),
                 ],
               ),
-              ExpansionTile(
-                title: const Text(
-                  "go commands",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.red),
-                ),
-                leading: const Icon(
-                  FontAwesomeIcons.laptopCode,
-                  color: Colors.blue,
-                ), //add icon
-                childrenPadding:
-                    const EdgeInsets.only(left: 30), //children padding
-                children: [
-                  ListTile(
-                      leading: const Icon(
-                        // Icons.tv,
-                        FontAwesomeIcons.code,
-                        color: Colors.pink,
-                      ),
-                      title: const Text(
-                        // 'add eth|etc address - acccount',
-                        'go cli common commands',
-                        // AppLocalizations.of(context)!.visitGoDevPlay,
-                        style: TextStyle(color: Colors.teal),
-                      ),
-                      subtitle: const Text(
-                        // 'https://play.golang.com/',
-                        'cli command line interface',
-                        // https://go.dev/play/
-                        style: TextStyle(
-                            fontStyle: FontStyle.italic, color: Colors.pink),
-                      ),
-                      trailing: const Icon(FontAwesomeIcons.codeCompare,
-                          color: Colors.green),
-                      onTap: () {
-                        // Navigator.of(context).pop();
-                        // _launchYouTube();
-                        _launchGoCommands();
-                      }),
-                  // list tile 5 deep link XTwitter
-                  // list tile 5 deep link youtube
-                ],
-              ),
               // try something new drawer header 2
               DrawerHeader(
                 decoration: const BoxDecoration(
@@ -709,10 +708,11 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ),
               ),
               ExpansionTile(
+                initiallyExpanded: true,
                 title: const Text(
                   "go.dev",
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.tealAccent),
+                  style: TextStyle(color: Colors.lightBlueAccent),
                 ),
                 leading: const Icon(
                   FontAwesomeIcons.golang,
@@ -868,6 +868,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ],
               ),
               ExpansionTile(
+                initiallyExpanded: true,
                 title: const Text(
                   "written guides & books",
                   textAlign: TextAlign.center,
@@ -883,21 +884,45 @@ class GoSyncNavDrawer extends StatelessWidget {
                   ListTile(
                       leading: const Icon(
                         Icons.account_balance,
-                        color: Colors.teal,
+                        color: Colors.tealAccent,
                       ),
                       title: const Text(
-                        'visit gopher guides',
-                        style: TextStyle(color: Colors.teal),
+                        'visit Gopher guides',
+                        style: TextStyle(color: Colors.blueAccent),
                       ),
                       subtitle: const Text(
                         'gopher guide tutorials',
                         style: TextStyle(
-                            fontStyle: FontStyle.italic, color: Colors.white),
+                            fontStyle: FontStyle.italic,
+                            color: Colors.orangeAccent),
                       ),
-                      trailing: const Icon(Icons.add_alert, color: Colors.teal),
+                      trailing: const Icon(FontAwesomeIcons.googleScholar,
+                          color: Colors.lightBlueAccent),
                       onTap: () {
                         // Navigator.of(context).pop();
                         _launchGopherGuides();
+                      }),
+                  ListTile(
+                      leading: const Icon(
+                        Icons.book,
+                        color: Colors.red,
+                      ),
+                      title: const Text(
+                        'visit Amazon golang books',
+                        style: TextStyle(color: Colors.blueAccent),
+                      ),
+                      subtitle: const Text(
+                        'amazon books and digital books',
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic,
+                            color: Colors.yellowAccent),
+                      ),
+                      trailing: const Icon(FontAwesomeIcons.amazon,
+                          color: Colors.orangeAccent),
+                      onTap: () {
+                        // Navigator.of(context).pop();
+                        _launchAmazonGolang();
+                        //   https://www.amazon.com/s?k=golang
                       }),
                 ],
               ),
@@ -1001,8 +1026,9 @@ class GoSyncNavDrawer extends StatelessWidget {
                       }),
                   // list tile 65 deep link blue sky
                   ListTile(
-                      leading: const Icon(FontAwesomeIcons.bluesky,
-                          color: Colors.yellowAccent,
+                      leading: const Icon(
+                        FontAwesomeIcons.bluesky,
+                        color: Colors.yellowAccent,
                         // Icons.alternate_email_rounded,
                         // Icons.flutter_dash,
                         // color: Colors.lightBlue,
@@ -1036,10 +1062,10 @@ class GoSyncNavDrawer extends StatelessWidget {
                   ListTile(
                       leading: const Icon(FontAwesomeIcons.facebook,
                           color: Colors.yellowAccent
-                        // Icons.alternate_email_rounded,
-                        // Icons.flutter_dash,
-                        // color: Colors.lightBlue,
-                      ),
+                          // Icons.alternate_email_rounded,
+                          // Icons.flutter_dash,
+                          // color: Colors.lightBlue,
+                          ),
                       title: const Text(
                         // 'add eth|etc address - acccount',
                         'visit Facebook @golang 7k subscribers',
@@ -1052,7 +1078,8 @@ class GoSyncNavDrawer extends StatelessWidget {
                         'deep link to FBook',
                         // https://go.dev/play/
                         style: TextStyle(
-                            fontStyle: FontStyle.italic, color: Colors.pinkAccent),
+                            fontStyle: FontStyle.italic,
+                            color: Colors.pinkAccent),
                       ),
                       trailing: const Icon(
                         FontAwesomeIcons.facebookF,
@@ -2127,6 +2154,17 @@ Future<void> _launchGopherGuides() async {
   }
 }
 
+// _launchAmazonGolang();
+final Uri _urlAmazonGolang = Uri.parse('https://www.amazon.com/s?k=golang');
+
+Future<void> _launchAmazonGolang() async {
+  debugPrint("customer left app to gopher guides  at");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlAmazonGolang)) {
+    throw Exception('Could not launch $_urlAmazonGolang');
+  }
+}
+
 // launch youtube
 final Uri _urlYoutube = Uri.parse('https://www.youtube.com/@golang');
 
@@ -2173,7 +2211,8 @@ Future<void> _launchBlueSkyGo() async {
 }
 
 // launch mastodon golang
-final Uri _urlFacebookGo = Uri.parse('https://www.facebook.com/groups/golanggonuts');
+final Uri _urlFacebookGo =
+    Uri.parse('https://www.facebook.com/groups/golanggonuts');
 
 Future<void> _launchFacebookGo() async {
   debugPrint("customer left app to Facebook social at");
