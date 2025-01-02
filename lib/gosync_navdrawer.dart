@@ -1244,6 +1244,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ],
               ),
               ExpansionTile(
+                initiallyExpanded: true,
                 title: const Text(
                   "go help",
                   textAlign: TextAlign.center,
@@ -1446,6 +1447,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ],
               ),
               ExpansionTile(
+                initiallyExpanded: true,
                 title: const Text(
                   "go a.i.",
                   textAlign: TextAlign.center,
@@ -1540,6 +1542,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ),
               ),
               const ExpansionTile(
+                initiallyExpanded: true,
                 title: Text(
                   "go art logos, photos & screenshots",
                   textAlign: TextAlign.center,
@@ -1555,6 +1558,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ],
               ),
               ExpansionTile(
+                initiallyExpanded: true,
                 title: const Text(
                   "go events",
                   textAlign: TextAlign.center,
@@ -1651,6 +1655,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ],
               ),
               ExpansionTile(
+                initiallyExpanded: true,
                 title: const Text(
                   "hire go programmers",
                   textAlign: TextAlign.center,
@@ -1747,6 +1752,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ],
               ),
               ExpansionTile(
+                initiallyExpanded: true,
                 title: const Text("go servers",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.pink)),
@@ -1788,11 +1794,37 @@ class GoSyncNavDrawer extends StatelessWidget {
               ),
               // drawer header 4
               DrawerHeader(
+                  decoration: const BoxDecoration(
+                    color: Colors.black,
+                    image: DecorationImage(
+                        image: AssetImage(_kAsset4), fit: BoxFit.contain),
+                  ),
+                  child: Text(
+                      // drawerHeader 'go designers,
+                      AppLocalizations.of(context)!.drawerHeader4,
+                      // style: const TextStyle(color: Colors.purpleAccent),
+                      textAlign: TextAlign.center,
+                      // overflow: TextOverflow.visible,
+                      // softWrap: true,
+                      // maxLines: 2,
+                      style: const TextStyle(
+                        // fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16.0,
+                        // ] //children
+                      ))),
+              DrawerHeader(
                 decoration: const BoxDecoration(
                   color: Colors.black,
                   image: DecorationImage(
                       image: AssetImage(_kAsset4), fit: BoxFit.contain),
                 ),
+                // onTap: () {
+                //   // Navigator.of(context).pop();
+                //   _launchGoGDG();
+                //   _launchPlayGolang(
+                //   //   launch deep linking youtube.
+                // },
                 child: Text(
                   // drawerHeader 'go designers,
                   AppLocalizations.of(context)!.drawerHeader4,
@@ -1809,299 +1841,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   ),
                 ),
               ),
-              ExpansionTile(
-                title: const Text(
-                  "app info & settings",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.yellowAccent),
-                ),
-                leading: const Icon(
-                  Icons.info_outline,
-                  // FontAwesomeIcons.google,
-                  color: Colors.deepOrangeAccent,
-                ), //add icon
-                childrenPadding:
-                    const EdgeInsets.only(left: 30), //children padding
-                children: [
-                  SwitchListTile(
-                    secondary: const Icon(
-                      Icons.color_lens_outlined,
-                      color: Colors.yellow,
-                    ),
-                    title: const Text(
-                      'theme selection',
-                      style: TextStyle(color: Colors.red),
-                    ),
-                    subtitle: const Text(
-                      'theme subtitle selection. switch this to alternate between light and dark theme',
-                      style: TextStyle(color: Colors.yellow),
-                    ),
-                    // value: _toggled,
-                    value: false,
-                    onChanged: (bool? value) {
-                      // setState(() => _toggled = value);
-                    },
-                  ),
-                  //2nd attempt
-                  const ListTile(
-                    isThreeLine: true,
-                    leading: Icon(
-                      Icons.color_lens_outlined,
-                      color: Colors.yellow,
-                    ),
-                    title: Text(
-                      'theme selection beta',
-                      style: TextStyle(color: Colors.red),
-                    ),
-                    subtitle: Text(
-                      'theme dark  \n theme dark 2',
-                      style: TextStyle(color: Colors.blue),
-                    ),
-                    // trailing: const Icon(
-                    //   Icons.colorize,
-                    //   color: Colors.green,
-                    // ),
-                    trailing: Icon(
-                      Icons.colorize,
-                      color: Colors.green,
-                    ),
-                    // trailing: ToggleButtons(
-                    //   isSelected: isSelected,
-                    //   onPressed: (int index) {
-                    //     setState(() {
-                    //       for (int buttonIndex = 0;
-                    //           buttonIndex < isSelected.length;
-                    //           buttonIndex++) {
-                    //         if (buttonIndex == index) {
-                    //           isSelected[buttonIndex] = true;
-                    //         } else {
-                    //           isSelected[buttonIndex] = false;
-                    //         }
-                    //       }
-                    //     });
-                    // },
-                    // children: const <Widget>[
-                    //   Icon(Icons.ac_unit),
-                    //   Icon(Icons.call),
-                    //   Icon(Icons.cake),
-                    // ],
-                    // ),
-                    // onTap: () {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => const GoSyncScrollbar2()),
-                    //     // MaterialPageRoute(builder: (context) => EthSyncShare()),
-                    //   );
-                    // }
-                  ),
-                  // working listtile
-                  ListTile(
-                      leading: const Icon(
-                        Icons.color_lens_outlined,
-                        color: Colors.yellow,
-                      ),
-                      title: const Text(
-                        'theme selection',
-                        style: TextStyle(color: Colors.red),
-                      ),
-                      trailing: const Icon(
-                        Icons.colorize,
-                        color: Colors.green,
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const GoSyncScrollbar2()),
-                          // MaterialPageRoute(builder: (context) => EthSyncShare()),
-                        );
-                      }),
-                  ListTile(
-                      leading: const Icon(
-                        Icons.accessibility,
-                        color: Colors.orange,
-                      ),
-                      title: const Text(
-                        'bug report & make suggestions',
-                        style: TextStyle(color: Colors.yellow),
-                      ),
-                      trailing: const Icon(
-                        Icons.share,
-                        color: Colors.yellowAccent,
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const GoSyncScrollbar2()),
-                          // MaterialPageRoute(builder: (context) => EthSyncShare()),
-                        );
-                      }),
-                  ListTile(
-                      leading: const Icon(
-                        Icons.share,
-                        color: Colors.pinkAccent,
-                      ),
-                      title: const Text(
-                        'share this app',
-                        style: TextStyle(color: Colors.greenAccent),
-                      ),
-                      trailing: const Icon(
-                        Icons.accessibility,
-                        color: Colors.yellowAccent,
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const GoSyncScrollbar2()),
-                          // MaterialPageRoute(builder: (context) => EthSyncShare()),
-                        );
-                      }),
-                  ListTile(
-                      leading: const Icon(
-                        Icons.info_outline,
-                        color: Colors.greenAccent,
-                      ),
-                      title: const Text(
-                        'about this app',
-                        style: TextStyle(color: Colors.yellowAccent),
-                      ),
-                      trailing: const Icon(
-                        Icons.help_center,
-                        color: Colors.orangeAccent,
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const GoSyncScrollbar2()),
-                        );
-                      }),
-                ],
-              ),
-              ExpansionTile(
-                title: const Text(
-                  "go installation levels",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.yellow),
-                ),
-                // leading: Icon(Icons.person), //add icon
-                leading: const Icon(
-                  Icons.school,
-                  // FontAwesomeIcons.googleScholar,
-                  color: Colors.red,
-                ),
-                childrenPadding: const EdgeInsets.only(
-                    left: 20), //children padding origianlly 60
-                children: [
-                  // Divider(color: Colors.grey.shade400, indent: 72.0, height: 1.0),
-                  ListTile(
-                      leading: const Icon(
-                        // Icons.tv,
-                        FontAwesomeIcons.windows,
-                        color: Colors.lightBlue,
-                      ),
-                      title: const Text(
-                        // 'add eth|etc address - acccount',
-                        'windows basic go install using gorretct directory structure && setting environment variables.',
-                        // AppLocalizations.of(context)!.visitGoDevPlay,
-                        style: TextStyle(color: Colors.yellow),
-                      ),
-                      subtitle: const Text(
-                        // 'https://play.golang.com/',
-                        'windows go install windows basic go install using gorretct directory structure && setting environment variables.golang',
-                        // https://go.dev/play/
-                        style: TextStyle(
-                            fontStyle: FontStyle.italic, color: Colors.green),
-                      ),
-                      // isThreeLine: true,
-                      trailing: const Icon(FontAwesomeIcons.windows,
-                          color: Colors.lightGreen),
-                      onTap: () {
-                        // Navigator.of(context).pop();
-                        // _launchYouTube();
-                      }),
-                  ListTile(
-                      leading: const Icon(
-                        // Icons.tv,
-                        FontAwesomeIcons.apple,
-                        color: Colors.grey,
-                      ),
-                      title: const Text(
-                        // 'add eth|etc address - acccount',
-                        'container Install & collaborative goup coding',
-                        // AppLocalizations.of(context)!.visitGoDevPlay,
-                        style: TextStyle(color: Colors.lightBlue),
-                      ),
-                      subtitle: const Text(
-                        // 'https://play.golang.com/',
-                        'docker & kubernetes container go production & github hookup ',
-                        // https://go.dev/play/
-                        style: TextStyle(
-                            fontStyle: FontStyle.italic, color: Colors.yellow),
-                      ),
-                      trailing: const Icon(FontAwesomeIcons.apple,
-                          color: Colors.blueGrey),
-                      onTap: () {
-                        // Navigator.of(context).pop();
-                        // _launchYouTube();
-                      }),
-                  // list tile 5 deep link youtube
-                  ListTile(
-                      leading: const Icon(
-                        // Icons.tv,
-                        FontAwesomeIcons.linux,
-                        color: Colors.red,
-                      ),
-                      title: const Text(
-                        // 'add eth|etc address - acccount',
-                        'go pro. production professional environment',
-                        // AppLocalizations.of(context)!.visitGoDevPlay,
-                        style: TextStyle(color: Colors.lightBlue),
-                      ),
-                      subtitle: const Text(
-                        // 'https://play.golang.com/',
-                        'professional go production environment',
-                        // https://go.dev/play/
-                        style: TextStyle(
-                            fontStyle: FontStyle.italic, color: Colors.yellow),
-                      ),
-                      trailing: const Icon(FontAwesomeIcons.linux,
-                          color: Colors.blue),
-                      onTap: () {
-                        // Navigator.of(context).pop();
-                        // _launchYouTube();
-                      }),
-                  // const Padding(
-                  //   padding: EdgeInsets.all(16.0),
-                  //   child: Text('==== Official Website ====',
-                  //       textAlign: TextAlign.center,
-                  //       style: TextStyle(color: Colors.redAccent)),
-                  // ),
-                ],
-              ),
-
-              // generic expansion tile
-              // ExpansionTile(
-              //   title: const Text(
-              //     "==== generic expansion tile ====",
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(color: Colors.white),
-              //   ),
-              //   leading: const Icon(
-              //     FontAwesomeIcons.google,
-              //     color: Colors.amber,
-              //   ), //add icon
-              //   childrenPadding:
-              //       const EdgeInsets.only(left: 30), //children padding
-              //   children: [
-              //     // ListTiles
-              //   ],
-              // ),
-            ] //children
-            ));
+            ]));
   }
 }
 

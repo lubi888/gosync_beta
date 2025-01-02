@@ -661,61 +661,6 @@ class GoSyncScrollbar0 extends StatelessWidget {
                     }),
               ],
             ),
-            ExpansionTile(
-              initiallyExpanded: true,
-              title: const Text(
-                "written guides & books",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.purple),
-              ),
-              leading: const Icon(
-                Icons.read_more,
-                color: Colors.amber,
-              ), //add icon
-              childrenPadding:
-                  const EdgeInsets.only(left: 30), //children padding
-              children: [
-                ListTile(
-                    leading: const Icon(
-                      Icons.account_balance,
-                      color: Colors.teal,
-                    ),
-                    title: const Text(
-                      'visit gopher guides',
-                      style: TextStyle(color: Colors.teal),
-                    ),
-                    subtitle: const Text(
-                      'gopher guide tutorials',
-                      style: TextStyle(
-                          fontStyle: FontStyle.italic, color: Colors.white),
-                    ),
-                    trailing: const Icon(Icons.add_alert, color: Colors.teal),
-                    onTap: () {
-                      // Navigator.of(context).pop();
-                      _launchGopherGuides();
-                    }),
-                ListTile(
-                    leading: const Icon(
-                      Icons.book,
-                      color: Colors.red,
-                    ),
-                    title: const Text(
-                      'visit Amazon golang books',
-                      style: TextStyle(color: Colors.blueAccent),
-                    ),
-                    subtitle: const Text(
-                      'amazon books and digital books',
-                      style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          color: Colors.yellowAccent),
-                    ),
-                    trailing: const Icon(FontAwesomeIcons.amazon,
-                        color: Colors.orangeAccent),
-                    onTap: () {
-                      // Navigator.of(context).pop();
-                      _launchAmazonGolang();
-                      //   https://www.amazon.com/s?k=golang
-                    }),
               ],
             ),
 
@@ -884,7 +829,7 @@ class GoSyncScrollbar0 extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      )
     );
   }
 }
