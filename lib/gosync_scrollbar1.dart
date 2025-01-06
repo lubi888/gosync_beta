@@ -9,7 +9,6 @@ import './gosync_navdrawer.dart';
 // import 'package:intl/intl.dart';
 // import 'package:async/async.dart';
 
-
 class GoSyncScrollbar1 extends StatelessWidget {
   const GoSyncScrollbar1({super.key});
   // print(myLocale.toString() + ' on Scrollbar1');
