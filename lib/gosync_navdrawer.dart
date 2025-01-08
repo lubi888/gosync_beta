@@ -1770,6 +1770,111 @@ class GoSyncNavDrawer extends StatelessWidget {
                   _launchDigitalOceanGo();
                   //   launch deep linking youtube.
                 },
+              ),
+                            ListTile(
+                // leading:
+                // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
+                leading: const Icon(
+                  FontAwesomeIcons.server,
+                  color: Colors.orangeAccent,
+                ),
+                title: const Text(
+                  'visit Heroku',
+                  style: TextStyle(color: Colors.lightGreen),
+                ),
+                subtitle: const Text(
+                  'look at some platform server setups',
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, color: Colors.purpleAccent),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.server,
+                  color: Colors.yellowAccent,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchHerokuGo();
+                  //   launch deep linking youtube.
+                },
+              ),
+                            ListTile(
+                // leading:
+                // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
+                leading: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.cyan,
+                ),
+                title: const Text(
+                  'visit A2Hosting',
+                  style: TextStyle(color: Colors.orange),
+                ),
+                subtitle: const Text(
+                  'look at some platform server setups',
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, color: Colors.greenAccent),
+                ),
+                trailing: const Icon(
+                  // FontAwesomeIcons.digitalOcean,
+                  Icons.cloud,
+                  color: Colors.redAccent,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchA2HostingGo();
+                  //   launch deep linking youtube.
+                },
+              ),
+                            ListTile(
+                // leading:
+                // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
+                leading: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.lightBlue,
+                ),
+                title: const Text(
+                  'visit Hostinger',
+                  style: TextStyle(color: Colors.lightBlue),
+                ),
+                subtitle: const Text(
+                  'look at some platform server setups',
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, color: Colors.greenAccent),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.redAccent,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchHostingerGo();
+                  //   launch deep linking youtube.
+                },
+              ),
+                            ListTile(
+                // leading:
+                // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
+                leading: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.lightBlue,
+                ),
+                title: const Text(
+                  'visit Vercel',
+                  style: TextStyle(color: Colors.lightBlue),
+                ),
+                subtitle: const Text(
+                  'look at some platform server setups',
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, color: Colors.greenAccent),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.redAccent,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchVercelGo();
+                  //   launch deep linking youtube.
+                },
               )
             ],
           ),
@@ -2124,7 +2229,6 @@ Future<void> _launchLinkedInGo() async {
 }
 
 // _launchDigitalOceanGo
-// https://medium.com/tag/golang
 final Uri _urlDigitalOceanGo = Uri.parse('https://www.digitalocean.com/');
 
 Future<void> _launchDigitalOceanGo() async {
@@ -2134,6 +2238,51 @@ Future<void> _launchDigitalOceanGo() async {
     throw Exception('Could not launch $_urlDigitalOceanGo');
   }
 }
+
+// _launchHerokuGo2
+final Uri _urlHerokuGo = Uri.parse('https://heroku.com/');
+
+Future<void> _launchHerokuGo() async {
+  debugPrint("customer left app to heroku");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlHerokuGo)) {
+    throw Exception('Could not launch $_urlHerokuGo');
+  }
+}
+
+// _launchDigitalOceanGo3
+final Uri _urlA2HostingGo = Uri.parse('https://www.a2hosting.com/');
+
+Future<void> _launchA2HostingGo() async {
+  debugPrint("customer left app to A2Hosting");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlA2HostingGo)) {
+    throw Exception('Could not launch $_urlA2HostingGo');
+  }
+}
+
+// _launchDigitalOceanGo4Vercel
+final Uri _urlVercelGo = Uri.parse('https://vercel.com/');
+
+Future<void> _launchVercelGo() async {
+  debugPrint("customer left app to Vercel");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlVercelGo)) {
+    throw Exception('Could not launch $_urlVercelGo');
+  }
+}
+
+// _launchDigitalOceanGo5
+final Uri _urlHostingerGo = Uri.parse('https://www.hostinger.com/');
+
+Future<void> _launchHostingerGo() async {
+  debugPrint("customer left app to Hostinger");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlHostingerGo)) {
+    throw Exception('Could not launch $_urlHostingerGo');
+  }
+}
+
 
 final Uri _urlFreelancer = Uri.parse('https://www.freelancer.com/');
 
