@@ -1757,9 +1757,9 @@ class GoSyncNavDrawer extends StatelessWidget {
                   style: TextStyle(color: Colors.lightBlue),
                 ),
                 subtitle: const Text(
-                  'look at some platform server setups',
+                  'sign up and get \$200 of credit to try our products over 60 days!',
                   style: TextStyle(
-                      fontStyle: FontStyle.italic, color: Colors.greenAccent),
+                      fontStyle: FontStyle.italic, color: Colors.purpleAccent),
                 ),
                 trailing: const Icon(
                   FontAwesomeIcons.digitalOcean,
@@ -1783,7 +1783,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   style: TextStyle(color: Colors.lightGreen),
                 ),
                 subtitle: const Text(
-                  'look at some platform server setups',
+                  'look at some go platform server setups',
                   style: TextStyle(
                       fontStyle: FontStyle.italic, color: Colors.purpleAccent),
                 ),
@@ -1873,6 +1873,110 @@ class GoSyncNavDrawer extends StatelessWidget {
                 onTap: () {
                   // Navigator.of(context).pop();
                   _launchVercelGo();
+                  //   launch deep linking youtube.
+                },
+              ),
+                           ListTile(
+                // leading:
+                // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
+                leading: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.lightBlue,
+                ),
+                title: const Text(
+                  'visit Nodechef',
+                  style: TextStyle(color: Colors.lightBlue),
+                ),
+                subtitle: const Text(
+                  'look at some platform server setups',
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, color: Colors.greenAccent),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.redAccent,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchNodechefGo();
+                  //   launch deep linking youtube.
+                },
+              ),
+                           ListTile(
+                // leading:
+                // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
+                leading: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.lightBlue,
+                ),
+                title: const Text(
+                  'visit Scalingo',
+                  style: TextStyle(color: Colors.lightBlue),
+                ),
+                subtitle: const Text(
+                  'look at some platform server setups',
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, color: Colors.greenAccent),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.redAccent,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchScalingoGo();
+                  //   launch deep linking youtube.
+                },
+              ),
+                           ListTile(
+                // leading:
+                // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
+                leading: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.lightBlue,
+                ),
+                title: const Text(
+                  'visit AWS Amazon Web Services',
+                  style: TextStyle(color: Colors.lightBlue),
+                ),
+                subtitle: const Text(
+                  'look at some platform server setups',
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, color: Colors.greenAccent),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.amazon,
+                  color: Colors.redAccent,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchAmazonWebServicesGo();
+                  //   launch deep linking youtube.
+                },
+              ),
+                           ListTile(
+                // leading:
+                // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
+                leading: const Icon(
+                  FontAwesomeIcons.digitalOcean,
+                  color: Colors.lightBlue,
+                ),
+                title: const Text(
+                  'visit Google Cloud',
+                  style: TextStyle(color: Colors.lightBlue),
+                ),
+                subtitle: const Text(
+                  'look at some platform server setups',
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, color: Colors.greenAccent),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.google,
+                  color: Colors.redAccent,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchGoogleCloudGo();
                   //   launch deep linking youtube.
                 },
               )
@@ -2228,62 +2332,6 @@ Future<void> _launchLinkedInGo() async {
   }
 }
 
-// _launchDigitalOceanGo
-final Uri _urlDigitalOceanGo = Uri.parse('https://www.digitalocean.com/');
-
-Future<void> _launchDigitalOceanGo() async {
-  debugPrint("customer left app to github go issues");
-  print(TimeOfDay.now());
-  if (!await launchUrl(_urlDigitalOceanGo)) {
-    throw Exception('Could not launch $_urlDigitalOceanGo');
-  }
-}
-
-// _launchHerokuGo2
-final Uri _urlHerokuGo = Uri.parse('https://heroku.com/');
-
-Future<void> _launchHerokuGo() async {
-  debugPrint("customer left app to heroku");
-  print(TimeOfDay.now());
-  if (!await launchUrl(_urlHerokuGo)) {
-    throw Exception('Could not launch $_urlHerokuGo');
-  }
-}
-
-// _launchDigitalOceanGo3
-final Uri _urlA2HostingGo = Uri.parse('https://www.a2hosting.com/');
-
-Future<void> _launchA2HostingGo() async {
-  debugPrint("customer left app to A2Hosting");
-  print(TimeOfDay.now());
-  if (!await launchUrl(_urlA2HostingGo)) {
-    throw Exception('Could not launch $_urlA2HostingGo');
-  }
-}
-
-// _launchDigitalOceanGo4Vercel
-final Uri _urlVercelGo = Uri.parse('https://vercel.com/');
-
-Future<void> _launchVercelGo() async {
-  debugPrint("customer left app to Vercel");
-  print(TimeOfDay.now());
-  if (!await launchUrl(_urlVercelGo)) {
-    throw Exception('Could not launch $_urlVercelGo');
-  }
-}
-
-// _launchDigitalOceanGo5
-final Uri _urlHostingerGo = Uri.parse('https://www.hostinger.com/');
-
-Future<void> _launchHostingerGo() async {
-  debugPrint("customer left app to Hostinger");
-  print(TimeOfDay.now());
-  if (!await launchUrl(_urlHostingerGo)) {
-    throw Exception('Could not launch $_urlHostingerGo');
-  }
-}
-
-
 final Uri _urlFreelancer = Uri.parse('https://www.freelancer.com/');
 
 Future<void> _launchFreelancer() async {
@@ -2398,5 +2446,112 @@ Future<void> _launchLiteIDE() async {
   print(TimeOfDay.now());
   if (!await launchUrl(_urlLiteIDE)) {
     throw Exception('Could not launch $_urlLiteIDE');
+  }
+}
+
+// _launchDigitalOceanGo
+final Uri _urlDigitalOceanGo = Uri.parse('https://www.digitalocean.com/community/tutorial-series/how-to-code-in-go');
+
+Future<void> _launchDigitalOceanGo() async {
+  debugPrint("customer left app to github go issues");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlDigitalOceanGo)) {
+    throw Exception('Could not launch $_urlDigitalOceanGo');
+  }
+}
+
+// _launchHerokuGo2
+final Uri _urlHerokuGo = Uri.parse('https://heroku.com/go');
+
+Future<void> _launchHerokuGo() async {
+  debugPrint("customer left app to heroku");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlHerokuGo)) {
+    throw Exception('Could not launch $_urlHerokuGo');
+  }
+}
+
+// _launchDigitalOceanGo3
+final Uri _urlA2HostingGo = Uri.parse('https://www.a2hosting.com/go-lang-hosting/');
+
+Future<void> _launchA2HostingGo() async {
+  debugPrint("customer left app to A2Hosting");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlA2HostingGo)) {
+    throw Exception('Could not launch $_urlA2HostingGo');
+  }
+}
+
+// _launchDigitalOceanGo4Vercel
+final Uri _urlVercelGo = Uri.parse('https://vercel.com/docs/functions/runtimes/go');
+
+Future<void> _launchVercelGo() async {
+  debugPrint("customer left app to Vercel");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlVercelGo)) {
+    throw Exception('Could not launch $_urlVercelGo');
+  }
+}
+
+// _launchDigitalOceanGo5
+final Uri _urlHostingerGo = Uri.parse('https://www.hostinger.com/tutorials/best-programming-languages-to-learn#8_Go');
+
+Future<void> _launchHostingerGo() async {
+  debugPrint("customer left app to Hostinger");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlHostingerGo)) {
+    throw Exception('Could not launch $_urlHostingerGo');
+  }
+}
+
+// https://www.nodechef.com/go-hosting
+// https://scalingo.com/runtimes/go-hosting
+
+// https://aws.amazon.com/sdk-for-go/
+// https://aws.amazon.com/developer/language/go/
+
+// https://cloud.google.com/go
+
+// _launchHerokuGo6
+final Uri _urlNodechefGod = Uri.parse('https://www.nodechef.com/go-hosting');
+
+Future<void> _launchNodechefGo() async {
+  debugPrint("customer left app to heroku");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlNodechefGod)) {
+    throw Exception('Could not launch $_urlNodechefGod');
+  }
+}
+
+// _launchDigitalOceanGo7
+final Uri _urlScalingoGo = Uri.parse('https://scalingo.com/runtimes/go-hosting');
+
+Future<void> _launchScalingoGo() async {
+  debugPrint("customer left app to A2Hosting");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlScalingoGo)) {
+    throw Exception('Could not launch $_urlScalingoGo');
+  }
+}
+
+// _launchDigitalOceanGo8
+final Uri _urlAmazonWebServicesGo = Uri.parse('https://aws.amazon.com/developer/language/go/');
+
+Future<void> _launchAmazonWebServicesGo() async {
+  debugPrint("customer left app to Vercel");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlAmazonWebServicesGo)) {
+    throw Exception('Could not launch $_urlAmazonWebServicesGo');
+  }
+}
+
+// _launchDigitalOceanGo9
+final Uri _urlGoogleCloudGo = Uri.parse('https://cloud.google.com/go');
+
+Future<void> _launchGoogleCloudGo() async {
+  debugPrint("customer left app to Hostinger");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoogleCloudGo)) {
+    throw Exception('Could not launch $_urlGoogleCloudGo');
   }
 }
