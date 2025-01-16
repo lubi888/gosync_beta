@@ -562,6 +562,7 @@ class GoSyncNavDrawer extends StatelessWidget {
             ],
           ),
           ExpansionTile(
+            initiallyExpanded: true,
             title: const Text(
               "go IDEs",
               textAlign: TextAlign.center,
@@ -628,7 +629,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                     // Navigator.of(context).pop();
                     _launchJetbrainsGoLand();
                   }),
-              // list tile 5 deep link youtube
+              // list tile 3
               ListTile(
                   leading: const Icon(
                     // Icons.tv,
@@ -637,7 +638,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   ),
                   title: const Text(
                     // 'add eth|etc address - acccount',
-                    'visit VIm Golang',
+                    'visit Vim Golang',
                     // AppLocalizations.of(context)!.visitGoDevPlay,
                     style: TextStyle(color: Colors.lightBlue),
                   ),
@@ -654,6 +655,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                     // Navigator.of(context).pop();
                     _launchVimGo();
                   }),
+              // list tile 4
               ListTile(
                   leading: const Icon(
                     // Icons.tv,
@@ -679,8 +681,110 @@ class GoSyncNavDrawer extends StatelessWidget {
                     // Navigator.of(context).pop();
                     // _launchLiteIDE();
                   }),
+              // listtile 5
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.codeFork,
+                    color: Colors.grey,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'visit Eclipse IDE',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.lightBlue),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'cross platform ide https://www.eclipse.org/',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.yellow),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.desktop,
+                      color: Colors.blueGrey),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    _launchJetbrainsGoLand();
+                  }),
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.codeFork,
+                    color: Colors.grey,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'visit CodeLite ide',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.lightBlue),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'cross platform ide ',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.yellow),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.desktop,
+                      color: Colors.blueGrey),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    _launchJetbrainsGoLand();
+                  }),
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.codeFork,
+                    color: Colors.grey,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'visit AdaCore Community edition',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.lightBlue),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'community edition is for free. Pro version available https://www.adacore.com/download ',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.yellow),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.desktop,
+                      color: Colors.blueGrey),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    _launchJetbrainsGoLand();
+                  }),
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.codeFork,
+                    color: Colors.grey,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'visit Apache Netbeans',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.lightBlue),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'cross platform ide https://netbeans.apache.org/front/main/index.html',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.yellow),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.desktop,
+                      color: Colors.blueGrey),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    _launchJetbrainsGoLand();
+                  }),
             ],
           ),
+          //
           // try something new drawer header 2
           DrawerHeader(
             decoration: const BoxDecoration(
@@ -1771,7 +1875,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   //   launch deep linking youtube.
                 },
               ),
-                            ListTile(
+              ListTile(
                 // leading:
                 // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
                 leading: const Icon(
@@ -1797,7 +1901,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   //   launch deep linking youtube.
                 },
               ),
-                            ListTile(
+              ListTile(
                 // leading:
                 // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
                 leading: const Icon(
@@ -1824,7 +1928,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   //   launch deep linking youtube.
                 },
               ),
-                            ListTile(
+              ListTile(
                 // leading:
                 // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
                 leading: const Icon(
@@ -1850,7 +1954,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   //   launch deep linking youtube.
                 },
               ),
-                            ListTile(
+              ListTile(
                 // leading:
                 // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
                 leading: const Icon(
@@ -1876,7 +1980,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   //   launch deep linking youtube.
                 },
               ),
-                           ListTile(
+              ListTile(
                 // leading:
                 // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
                 leading: const Icon(
@@ -1902,7 +2006,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   //   launch deep linking youtube.
                 },
               ),
-                           ListTile(
+              ListTile(
                 // leading:
                 // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
                 leading: const Icon(
@@ -1928,7 +2032,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   //   launch deep linking youtube.
                 },
               ),
-                           ListTile(
+              ListTile(
                 // leading:
                 // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
                 leading: const Icon(
@@ -1954,7 +2058,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   //   launch deep linking youtube.
                 },
               ),
-                           ListTile(
+              ListTile(
                 // leading:
                 // CircleAvatar(radius: 14, backgroundColor: Colors.yellowAccent),
                 leading: const Icon(
@@ -2449,8 +2553,52 @@ Future<void> _launchLiteIDE() async {
   }
 }
 
+// _launchJetbrainsGoLand
+final Uri _urlJetbrainsGoLand = Uri.parse('https://www.jetbrains.com/go/');
+
+Future<void> _launchJetbrainsGoLand() async {
+  debugPrint("customer left app to jetbrains ");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlJetbrainsGoLand)) {
+    throw Exception('Could not launch $_urlJetbrainsGoLand');
+  }
+}
+
+// _launchJetbrainsGoLand
+final Uri _urlJetbrainsGoLand = Uri.parse('https://www.jetbrains.com/go/');
+
+Future<void> _launchJetbrainsGoLand() async {
+  debugPrint("customer left app to jetbrains ");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlJetbrainsGoLand)) {
+    throw Exception('Could not launch $_urlJetbrainsGoLand');
+  }
+}
+
+// _launchJetbrainsGoLand
+final Uri _urlJetbrainsGoLand = Uri.parse('https://www.jetbrains.com/go/');
+
+Future<void> _launchJetbrainsGoLand() async {
+  debugPrint("customer left app to jetbrains ");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlJetbrainsGoLand)) {
+    throw Exception('Could not launch $_urlJetbrainsGoLand');
+  }
+}
+
+// _launchJetbrainsGoLand
+final Uri _urlJetbrainsGoLand = Uri.parse('https://www.jetbrains.com/go/');
+
+Future<void> _launchJetbrainsGoLand() async {
+  debugPrint("customer left app to jetbrains ");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlJetbrainsGoLand)) {
+    throw Exception('Could not launch $_urlJetbrainsGoLand');
+  }
+}
 // _launchDigitalOceanGo
-final Uri _urlDigitalOceanGo = Uri.parse('https://www.digitalocean.com/community/tutorial-series/how-to-code-in-go');
+final Uri _urlDigitalOceanGo = Uri.parse(
+    'https://www.digitalocean.com/community/tutorial-series/how-to-code-in-go');
 
 Future<void> _launchDigitalOceanGo() async {
   debugPrint("customer left app to github go issues");
@@ -2472,7 +2620,8 @@ Future<void> _launchHerokuGo() async {
 }
 
 // _launchDigitalOceanGo3
-final Uri _urlA2HostingGo = Uri.parse('https://www.a2hosting.com/go-lang-hosting/');
+final Uri _urlA2HostingGo =
+    Uri.parse('https://www.a2hosting.com/go-lang-hosting/');
 
 Future<void> _launchA2HostingGo() async {
   debugPrint("customer left app to A2Hosting");
@@ -2483,7 +2632,8 @@ Future<void> _launchA2HostingGo() async {
 }
 
 // _launchDigitalOceanGo4Vercel
-final Uri _urlVercelGo = Uri.parse('https://vercel.com/docs/functions/runtimes/go');
+final Uri _urlVercelGo =
+    Uri.parse('https://vercel.com/docs/functions/runtimes/go');
 
 Future<void> _launchVercelGo() async {
   debugPrint("customer left app to Vercel");
@@ -2494,7 +2644,8 @@ Future<void> _launchVercelGo() async {
 }
 
 // _launchDigitalOceanGo5
-final Uri _urlHostingerGo = Uri.parse('https://www.hostinger.com/tutorials/best-programming-languages-to-learn#8_Go');
+final Uri _urlHostingerGo = Uri.parse(
+    'https://www.hostinger.com/tutorials/best-programming-languages-to-learn#8_Go');
 
 Future<void> _launchHostingerGo() async {
   debugPrint("customer left app to Hostinger");
@@ -2524,7 +2675,8 @@ Future<void> _launchNodechefGo() async {
 }
 
 // _launchDigitalOceanGo7
-final Uri _urlScalingoGo = Uri.parse('https://scalingo.com/runtimes/go-hosting');
+final Uri _urlScalingoGo =
+    Uri.parse('https://scalingo.com/runtimes/go-hosting');
 
 Future<void> _launchScalingoGo() async {
   debugPrint("customer left app to A2Hosting");
@@ -2535,7 +2687,8 @@ Future<void> _launchScalingoGo() async {
 }
 
 // _launchDigitalOceanGo8
-final Uri _urlAmazonWebServicesGo = Uri.parse('https://aws.amazon.com/developer/language/go/');
+final Uri _urlAmazonWebServicesGo =
+    Uri.parse('https://aws.amazon.com/developer/language/go/');
 
 Future<void> _launchAmazonWebServicesGo() async {
   debugPrint("customer left app to Vercel");
