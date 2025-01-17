@@ -206,7 +206,7 @@ class GoSyncUninstall extends StatelessWidget {
             gosyncUninstallInstructions6text,
             // AppLocalizations.of(context)!.gosyncUninstallInstructions6,
             textAlign: TextAlign.left,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.yellowAccent,
               fontStyle: FontStyle.normal,
               fontSize: 20.0,
@@ -367,7 +367,7 @@ class GoSyncUninstall extends StatelessWidget {
           ),
           child: const Text(
             // ethCheckGoEnv,
-            'When you have multiple versions installed, you can discover where each is installed, look at the version\'s GOROOT value. For example, run a command such as the following\: \n\$ go1.10.7 env GOROOT',
+            'When you have multiple versions installed, you can discover where each is installed, look at the version\'s GOROOT value. For example, run a command such as the following: \n\$ go1.10.7 env GOROOT',
             textAlign: TextAlign.left,
             style: TextStyle(
               color: Colors.yellow,
@@ -490,8 +490,6 @@ Future<void> _launchPlayGolangHelloCode() async {
     throw Exception('Could not launch $_urlPlayGolangHelloCode');
   }
 }
-
-
 
 // const snackBarGoCodeCopy = SnackBar(
 //   backgroundColor: Colors.green,

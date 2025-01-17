@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import './gosync_text.dart';
 import './gosync_navdrawer.dart';
 // import 'package:intl/intl.dart';

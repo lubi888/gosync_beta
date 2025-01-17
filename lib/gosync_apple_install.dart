@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import './gosync_navdrawer.dart';
-import './gosync_text.dart';
 
 class GoSyncAppleInstall extends StatelessWidget {
   const GoSyncAppleInstall({super.key});
@@ -63,7 +60,7 @@ class GoSyncAppleInstall extends StatelessWidget {
               }
             },
             text:
-            '\n1b background = black continaer from 1 Install Golang and GoEth Geth bare bones.'
+                '\n1b background = black continaer from 1 Install Golang and GoEth Geth bare bones.'
                 '\nWritten using Flutter for mobile & desktop.'
                 '\nCheck out our website www.GoSync.com.'
                 '\nEmail us at bugs@gosync.com.'

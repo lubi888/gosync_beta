@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 // import 'package:flutter_linkify/flutter_linkify.dart';
 // master text file for transtations using arb files l10n.
 
@@ -248,7 +247,7 @@ const String goPowerShellGoEnv = ('Windows PowerShell\n\n'
     '\nset GOOS=windows'
     '\nset GOPATH=C:\\Users\\adam\\go'
     '\nset GOPRIVATE='
-    '\nset GOPROXY=https:\//proxy.golang.org,direct'
+    '\nset GOPROXY=https://proxy.golang.org,direct'
     '\nset GOROOT=C:\\Program Files\\Go'
     '\nset GOSUMDB=sum.golang.org'
     '\nset GOTMPDIR='
@@ -273,7 +272,7 @@ const String goPowerShellGoEnv = ('Windows PowerShell\n\n'
     '\nset CGO_FFLAGS=-O2 -g'
     '\nset CGO_LDFLAGS=-O2 -g'
     '\nset PKG_CONFIG=pkg-config'
-    '\nset GOGCCFLAGS=-m64 -map=C:\WINDOWS\TEMP\go-build=/tmp/go-build -gno-record-gcc-switches'
+    '\nset GOGCCFLAGS=-m64 -map=C:WINDOWSTEMPgo-build=/tmp/go-build -gno-record-gcc-switches'
     '\nPS C:\\Users\\adam>>');
 
 const String goLinuxShellGoEnv = ('tortek@gosync:~\$go env'

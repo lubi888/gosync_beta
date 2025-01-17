@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:gosync_beta/gosync_text.dart';
-import 'package:intl/intl.dart';
 
 // //   // appBar: AppBar(
 // //   // Here we take the value from the GoSyncHome object that was created by
@@ -138,8 +134,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
                       // humanize: true,
                       text: 'https://www.ethSync.org')),
               const PopupMenuItem(
-                child: Text("beta"),
                 value: "Ethereum Website",
+                child: Text("beta"),
               ),
               PopupMenuItem(
                 child: Linkify(

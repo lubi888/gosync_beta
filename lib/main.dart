@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 // import 'package:flutter/services.dart'; // for root bundle
@@ -21,7 +20,6 @@ import './gosync_install_primary.dart';
 import './gosync_install_secondary.dart';
 import './gosync_install_tertiary.dart';
 // import './gosync_urllinks.dart';
-
 
 void main() {
   runApp(const GoSync());
@@ -61,18 +59,22 @@ class GoSync extends StatelessWidget {
       routes: {
         '/home': (BuildContext context) => const GoSyncHome(title: goSyncTitle),
         '/about': (BuildContext context) => const GoSyncAbout(),
-        '/appbar' : (BuildContext context) => const GoSyncAppBar(),
+        '/appbar': (BuildContext context) => const GoSyncAppBar(),
         '/navdrawer': (BuildContext context) => const GoSyncNavDrawer(),
         '/scrollbar0': (BuildContext context) => const GoSyncScrollbar0(),
         '/scrollbar1': (BuildContext context) => const GoSyncScrollbar1(),
         '/scrollbar2': (BuildContext context) => const GoSyncScrollbar2(),
-        '/windowsInstall': (BuildContext context) => const GoSyncWindowsInstall(),
+        '/windowsInstall': (BuildContext context) =>
+            const GoSyncWindowsInstall(),
         '/appleInstall': (BuildContext context) => const GoSyncAppleInstall(),
         '/linuxInstall': (BuildContext context) => const GoSyncLinuxInstall(),
         '/unInstall': (BuildContext context) => const GoSyncUninstall(),
-        '/install_primary': (BuildContext context) => const GoSyncInstallPrimary(),
-        '/install_secondary': (BuildContext context) => const GoSyncInstallSecondary(),
-        '/install_tertiary': (BuildContext context) => const GoSyncInstallTertiary(),
+        '/install_primary': (BuildContext context) =>
+            const GoSyncInstallPrimary(),
+        '/install_secondary': (BuildContext context) =>
+            const GoSyncInstallSecondary(),
+        '/install_tertiary': (BuildContext context) =>
+            const GoSyncInstallTertiary(),
         // '/text': (BuildContext context) => const GoSyncText(),
         // '/urlLinks': (BuildContext context) => const GoSyncUrlLinks(),
       },

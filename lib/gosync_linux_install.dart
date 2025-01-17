@@ -631,8 +631,6 @@ Future<void> _launchPlayGolangHelloCode() async {
   }
 }
 
-
-
 // const snackBarGoCodeCopy = SnackBar(
 //   backgroundColor: Colors.green,
 //   duration: Duration(seconds: 3),

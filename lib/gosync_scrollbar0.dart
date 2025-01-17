@@ -1,25 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_linkify/flutter_linkify.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:share_plus/share_plus.dart';
-import './main.dart';
-import './gosync_about.dart';
-import './gosync_appbar.dart';
 import './gosync_navdrawer.dart';
-import './gosync_home.dart';
 import './gosync_text.dart';
-import './gosync_scrollbar0.dart';
-import './gosync_scrollbar1.dart';
-import './gosync_scrollbar2.dart';
-import './gosync_windows_install.dart';
-import './gosync_apple_install.dart';
-import './gosync_linux_install.dart';
-import './gosync_uninstall.dart';
-import './gosync_urllinks.dart';
 
 // import 'package:json_theme/json_theme.dart';
 // import 'package:gosync/gosync_text.dart';
@@ -31,8 +16,6 @@ import './gosync_urllinks.dart';
 // import './ethsync_extendedimage.dart';
 // import './ethsync_scrollbar0.dart';
 // import './ethsync_scrollbar1.dart';
-
-import './gosync_scrollbar2.dart';
 
 const String _kAsset1 = 'assets/images/golang_developers.png';
 const String _kAsset2 = 'assets/images/_kAsset32.png';

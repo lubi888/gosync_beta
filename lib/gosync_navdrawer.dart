@@ -1,25 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_linkify/flutter_linkify.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
-import './main.dart';
-import './gosync_about.dart';
-import './gosync_appbar.dart';
-import './gosync_navdrawer.dart';
-import './gosync_home.dart';
-import './gosync_text.dart';
-import './gosync_scrollbar0.dart';
-import './gosync_scrollbar1.dart';
 import './gosync_scrollbar2.dart';
-import './gosync_windows_install.dart';
-import './gosync_apple_install.dart';
-import './gosync_linux_install.dart';
-import './gosync_uninstall.dart';
-import './gosync_urllinks.dart';
 
 // import 'package:json_theme/json_theme.dart';
 // import 'package:gosync/gosync_text.dart';
@@ -31,8 +15,6 @@ import './gosync_urllinks.dart';
 // import './ethsync_extendedimage.dart';
 // import './ethsync_scrollbar0.dart';
 // import './ethsync_scrollbar1.dart';
-
-import './gosync_scrollbar2.dart';
 
 const String _kAsset1 = 'assets/images/golang_developers.png';
 const String _kAsset2 = 'assets/images/_kAsset32.png';
@@ -553,12 +535,6 @@ class GoSyncNavDrawer extends StatelessWidget {
                     // _launchYouTube();
                     Navigator.pushNamed(context, '/install_tertiary');
                   }),
-              // const Padding(
-              //   padding: EdgeInsets.all(16.0),
-              //   child: Text('==== Official Website ====',
-              //       textAlign: TextAlign.center,
-              //       style: TextStyle(color: Colors.redAccent)),
-              // ),
             ],
           ),
           ExpansionTile(
@@ -705,7 +681,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                       color: Colors.blueGrey),
                   onTap: () {
                     // Navigator.of(context).pop();
-                    _launchJetbrainsGoLand();
+                    _launchEclipseGo();
                   }),
               ListTile(
                   leading: const Icon(
@@ -714,23 +690,18 @@ class GoSyncNavDrawer extends StatelessWidget {
                     color: Colors.grey,
                   ),
                   title: const Text(
-                    // 'add eth|etc address - acccount',
                     'visit CodeLite ide',
-                    // AppLocalizations.of(context)!.visitGoDevPlay,
                     style: TextStyle(color: Colors.lightBlue),
                   ),
                   subtitle: const Text(
-                    // 'https://play.golang.com/',
                     'cross platform ide ',
-                    // https://go.dev/play/
                     style: TextStyle(
                         fontStyle: FontStyle.italic, color: Colors.yellow),
                   ),
                   trailing: const Icon(FontAwesomeIcons.desktop,
                       color: Colors.blueGrey),
                   onTap: () {
-                    // Navigator.of(context).pop();
-                    _launchJetbrainsGoLand();
+                    _launchCodeLiteGo();
                   }),
               ListTile(
                   leading: const Icon(
@@ -739,15 +710,11 @@ class GoSyncNavDrawer extends StatelessWidget {
                     color: Colors.grey,
                   ),
                   title: const Text(
-                    // 'add eth|etc address - acccount',
                     'visit AdaCore Community edition',
-                    // AppLocalizations.of(context)!.visitGoDevPlay,
                     style: TextStyle(color: Colors.lightBlue),
                   ),
                   subtitle: const Text(
-                    // 'https://play.golang.com/',
                     'community edition is for free. Pro version available https://www.adacore.com/download ',
-                    // https://go.dev/play/
                     style: TextStyle(
                         fontStyle: FontStyle.italic, color: Colors.yellow),
                   ),
@@ -755,32 +722,27 @@ class GoSyncNavDrawer extends StatelessWidget {
                       color: Colors.blueGrey),
                   onTap: () {
                     // Navigator.of(context).pop();
-                    _launchJetbrainsGoLand();
+                    _launchAdaCoreGo();
                   }),
               ListTile(
                   leading: const Icon(
-                    // Icons.tv,
                     FontAwesomeIcons.codeFork,
                     color: Colors.grey,
                   ),
                   title: const Text(
-                    // 'add eth|etc address - acccount',
                     'visit Apache Netbeans',
-                    // AppLocalizations.of(context)!.visitGoDevPlay,
                     style: TextStyle(color: Colors.lightBlue),
                   ),
                   subtitle: const Text(
-                    // 'https://play.golang.com/',
                     'cross platform ide https://netbeans.apache.org/front/main/index.html',
-                    // https://go.dev/play/
                     style: TextStyle(
                         fontStyle: FontStyle.italic, color: Colors.yellow),
                   ),
-                  trailing: const Icon(FontAwesomeIcons.desktop,
+                  trailing: const Icon(FontAwesomeIcons.server,
                       color: Colors.blueGrey),
                   onTap: () {
                     // Navigator.of(context).pop();
-                    _launchJetbrainsGoLand();
+                    _launchNetbeansGo();
                   }),
             ],
           ),
@@ -2553,49 +2515,51 @@ Future<void> _launchLiteIDE() async {
   }
 }
 
-// _launchJetbrainsGoLand
-final Uri _urlJetbrainsGoLand = Uri.parse('https://www.jetbrains.com/go/');
+// _launchEclipseGo
+final Uri _urlEclipseGo = Uri.parse('https://www.eclipse.org/');
 
-Future<void> _launchJetbrainsGoLand() async {
-  debugPrint("customer left app to jetbrains ");
+Future<void> _launchEclipseGo() async {
+  debugPrint("customer left app to eclipse");
   print(TimeOfDay.now());
-  if (!await launchUrl(_urlJetbrainsGoLand)) {
-    throw Exception('Could not launch $_urlJetbrainsGoLand');
+  if (!await launchUrl(_urlEclipseGo)) {
+    throw Exception('Could not launch $_urlEclipseGo');
   }
 }
 
-// _launchJetbrainsGoLand
-final Uri _urlJetbrainsGoLand = Uri.parse('https://www.jetbrains.com/go/');
+// _launchCodeLiteGo
+final Uri _urlCodeLiteGo = Uri.parse('https://codelite.org/');
 
-Future<void> _launchJetbrainsGoLand() async {
+Future<void> _launchCodeLiteGo() async {
   debugPrint("customer left app to jetbrains ");
   print(TimeOfDay.now());
-  if (!await launchUrl(_urlJetbrainsGoLand)) {
-    throw Exception('Could not launch $_urlJetbrainsGoLand');
+  if (!await launchUrl(_urlCodeLiteGo)) {
+    throw Exception('Could not launch $_urlCodeLiteGo');
   }
 }
 
-// _launchJetbrainsGoLand
-final Uri _urlJetbrainsGoLand = Uri.parse('https://www.jetbrains.com/go/');
+// _launchAdaCore
+final Uri _urlAdaCoreGo = Uri.parse('https://www.adacore.com/download');
 
-Future<void> _launchJetbrainsGoLand() async {
-  debugPrint("customer left app to jetbrains ");
+Future<void> _launchAdaCoreGo() async {
+  debugPrint("customer left app to codelite");
   print(TimeOfDay.now());
-  if (!await launchUrl(_urlJetbrainsGoLand)) {
-    throw Exception('Could not launch $_urlJetbrainsGoLand');
+  if (!await launchUrl(_urlAdaCoreGo)) {
+    throw Exception('Could not launch $_urlAdaCoreGo');
   }
 }
 
-// _launchJetbrainsGoLand
-final Uri _urlJetbrainsGoLand = Uri.parse('https://www.jetbrains.com/go/');
+// _launchNetbeansGo
+final Uri _urlNetbeansGo =
+    Uri.parse('https://netbeans.apache.org/front/main/index.html');
 
-Future<void> _launchJetbrainsGoLand() async {
-  debugPrint("customer left app to jetbrains ");
+Future<void> _launchNetbeansGo() async {
+  debugPrint("customer left app to netbeans");
   print(TimeOfDay.now());
-  if (!await launchUrl(_urlJetbrainsGoLand)) {
-    throw Exception('Could not launch $_urlJetbrainsGoLand');
+  if (!await launchUrl(_urlNetbeansGo)) {
+    throw Exception('Could not launch $_urlNetbeansGo');
   }
 }
+
 // _launchDigitalOceanGo
 final Uri _urlDigitalOceanGo = Uri.parse(
     'https://www.digitalocean.com/community/tutorial-series/how-to-code-in-go');
