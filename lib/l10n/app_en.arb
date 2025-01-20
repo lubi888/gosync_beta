@@ -1,5 +1,5 @@
 {
-  "titledate": "goSync_beta250117",
+  "titledate": "goSync_beta250120",
   "@titledate": {
     "description": "The conventional newborn programmer greeting"
   },
@@ -54,14 +54,14 @@
   "ethCheckGoHelp": "Now let us check that our installation of golang is working.\nOpen up a terminal (linux & mac) or a command prompt (windows) and type in the following code:\ngo version\nThis is your go version and it should be 1.12-1.13 as these are the latest versions\nType in the following code:\ngo help\nThis is a list of all available commands.",
   "@ethCheckGoHelp": {
     "description": "check go environment"
-  },  
+  },
   "golangInstallInstructions": "Visit https://golang.org/doc/install and browse for assistance with ways to install golang on different system architectures.\nFor windows use the recommended .msi installer and it is fine to put the goland files deep within the windows system. C:\\Go is preferable when wanting to program.",
-    "@golangInstallInstructions": {
+  "@golangInstallInstructions": {
     "description": "check go environment"
   },
   "golangInstallInstructions2": "\nexport PATH=$PATH:/usr/local/go/bin\n",
   "@golangInstallInstructions2": {
-  "description": "check go environment 2"
+    "description": "check go environment 2"
   },
   "gosyncWindowsInstallInstructions": "1, Open the MSI file you downloaded and follow the prompts to install Go. \n\nBy default, the installer will install Go to Program Files or Program Files (x86). You can change the location as needed. After installing, you will need to close and reopen any open command prompts so that changes to the environment made by the installer are reflected at the command prompt.",
   "@gosyncWindowsInstallInstructions": {

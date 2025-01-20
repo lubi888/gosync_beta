@@ -100,13 +100,6 @@ class GoSyncNavDrawer extends StatelessWidget {
                   ),
                   onTap: () {
                     Navigator.pushNamed(context, '/');
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (BuildContext context) =>
-                    //           const GoSyncScrollbar0()),
-                    // MaterialPageRoute(builder: (context) => EthSyncShare()),
-                    // );
                   }),
               SwitchListTile(
                 secondary: const Icon(
@@ -123,9 +116,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                 ),
                 // value: _toggled,
                 value: false,
-                onChanged: (bool? value) {
-                  // setState(() => _toggled = value);
-                },
+                onChanged: (bool? value) {},
               ),
               //2nd attempt
               const ListTile(
@@ -142,43 +133,10 @@ class GoSyncNavDrawer extends StatelessWidget {
                   'theme dark  \n theme dark 2',
                   style: TextStyle(color: Colors.blue),
                 ),
-                // trailing: const Icon(
-                //   Icons.colorize,
-                //   color: Colors.green,
-                // ),
                 trailing: Icon(
                   Icons.colorize,
                   color: Colors.green,
                 ),
-                // trailing: ToggleButtons(
-                //   isSelected: isSelected,
-                //   onPressed: (int index) {
-                //     setState(() {
-                //       for (int buttonIndex = 0;
-                //           buttonIndex < isSelected.length;
-                //           buttonIndex++) {
-                //         if (buttonIndex == index) {
-                //           isSelected[buttonIndex] = true;
-                //         } else {
-                //           isSelected[buttonIndex] = false;
-                //         }
-                //       }
-                //     });
-                // },
-                // children: const <Widget>[
-                //   Icon(Icons.ac_unit),
-                //   Icon(Icons.call),
-                //   Icon(Icons.cake),
-                // ],
-                // ),
-                // onTap: () {
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) => const GoSyncScrollbar2()),
-                //     // MaterialPageRoute(builder: (context) => EthSyncShare()),
-                //   );
-                // }
               ),
               // working listtile
               ListTile(
@@ -217,12 +175,6 @@ class GoSyncNavDrawer extends StatelessWidget {
                     color: Colors.yellowAccent,
                   ),
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const GoSyncScrollbar2()),
-                    //   // MaterialPageRoute(builder: (context) => EthSyncShare()),
-                    // );
                     Share.share('check out my website https://gosync.com',
                         subject: 'Bugs & Suggestions emails');
                   }),
@@ -655,7 +607,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                       const Icon(FontAwesomeIcons.desktop, color: Colors.red),
                   onTap: () {
                     // Navigator.of(context).pop();
-                    // _launchLiteIDE();
+                    _launchLiteIDE();
                   }),
               // listtile 5
               ListTile(
@@ -666,7 +618,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   ),
                   title: const Text(
                     // 'add eth|etc address - acccount',
-                    'visit Eclipse IDE',
+                    'visit Eclipse',
                     // AppLocalizations.of(context)!.visitGoDevPlay,
                     style: TextStyle(color: Colors.lightBlue),
                   ),
@@ -690,11 +642,11 @@ class GoSyncNavDrawer extends StatelessWidget {
                     color: Colors.grey,
                   ),
                   title: const Text(
-                    'visit CodeLite ide',
+                    'visit CodeLite',
                     style: TextStyle(color: Colors.lightBlue),
                   ),
                   subtitle: const Text(
-                    'cross platform ide ',
+                    'cross platform ide written in go',
                     style: TextStyle(
                         fontStyle: FontStyle.italic, color: Colors.yellow),
                   ),
@@ -705,12 +657,11 @@ class GoSyncNavDrawer extends StatelessWidget {
                   }),
               ListTile(
                   leading: const Icon(
-                    // Icons.tv,
                     FontAwesomeIcons.codeFork,
                     color: Colors.grey,
                   ),
                   title: const Text(
-                    'visit AdaCore Community edition',
+                    'visit AdaCore',
                     style: TextStyle(color: Colors.lightBlue),
                   ),
                   subtitle: const Text(
@@ -730,11 +681,11 @@ class GoSyncNavDrawer extends StatelessWidget {
                     color: Colors.grey,
                   ),
                   title: const Text(
-                    'visit Apache Netbeans',
+                    'visit Netbeans',
                     style: TextStyle(color: Colors.lightBlue),
                   ),
                   subtitle: const Text(
-                    'cross platform ide https://netbeans.apache.org/front/main/index.html',
+                    'apache open source servers cross platform ide https://netbeans.apache.org/front/main/index.html',
                     style: TextStyle(
                         fontStyle: FontStyle.italic, color: Colors.yellow),
                   ),
@@ -746,7 +697,6 @@ class GoSyncNavDrawer extends StatelessWidget {
                   }),
             ],
           ),
-          //
           // try something new drawer header 2
           DrawerHeader(
             decoration: const BoxDecoration(
@@ -801,8 +751,6 @@ class GoSyncNavDrawer extends StatelessWidget {
                   trailing:
                       const Icon(FontAwesomeIcons.google, color: Colors.blue),
                   onTap: () {
-                    // Navigator.pop(context);
-                    // Navigator.of(context).pop();
                     _launchGoDev();
                   }),
               ListTile(
@@ -959,7 +907,6 @@ class GoSyncNavDrawer extends StatelessWidget {
                   trailing: const Icon(FontAwesomeIcons.googleScholar,
                       color: Colors.lightBlueAccent),
                   onTap: () {
-                    // Navigator.of(context).pop();
                     _launchGopherGuides();
                   }),
               ListTile(
@@ -980,9 +927,7 @@ class GoSyncNavDrawer extends StatelessWidget {
                   trailing: const Icon(FontAwesomeIcons.amazon,
                       color: Colors.orangeAccent),
                   onTap: () {
-                    // Navigator.of(context).pop();
                     _launchAmazonGolang();
-                    //   https://www.amazon.com/s?k=golang
                   }),
             ],
           ),
