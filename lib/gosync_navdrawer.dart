@@ -1510,6 +1510,59 @@ class GoSyncNavDrawer extends StatelessWidget {
                     // Navigator.of(context).pop();
                     _launchGithubCopilot(); //   launch deep linking youtube.
                   }),
+              // ai 3
+              ListTile(
+                  leading: const Icon(Icons.chat, color: Colors.red),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'visit Go Wiki AI',
+                    // visitGoPlayground,
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'build AI agents with golang',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.green),
+                  ),
+                  trailing: const Icon(
+                    FontAwesomeIcons.google,
+                    color: Colors.red,
+                  ),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    // _launchDiscordGophers();
+                    _launchGoWikiAI();
+                    //   launch deep linking youtube.
+                  }),
+              // aii 4
+              ListTile(
+                  leading:
+                      const Icon(FontAwesomeIcons.search, color: Colors.yellow),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'visit Workik',
+                    // visitGoPlayground,
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.orange),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'deep ai integration with collaboration.',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.green),
+                  ),
+                  trailing: const Icon(
+                    FontAwesomeIcons.microsoft,
+                    color: Colors.red,
+                  ),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    _launchGoWorkik(); //   launch deep linking youtube.
+                  }),
             ],
           ),
           // drawer header 3
@@ -2385,6 +2438,28 @@ Future<void> _launchGeminiCodeAssist() async {
   print(TimeOfDay.now());
   if (!await launchUrl(_urlGeminiCodeAssist)) {
     throw Exception('Could not launch $_urlGeminiCodeAssist');
+  }
+}
+
+// https://github.com/features/copilot/
+final Uri _urlGoWikiAI = Uri.parse('https://go.dev/wiki/AI');
+
+Future<void> _launchGoWikiAI() async {
+  debugPrint("customer left app to go wiki ai");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoWikiAI)) {
+    throw Exception('Could not launch $_urlGoWikiAI');
+  }
+}
+
+// workik
+final Uri _urlGoWorkik = Uri.parse('https://workik.com/');
+
+Future<void> _launchGoWorkik() async {
+  debugPrint("customer left app to workikr");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoWorkik)) {
+    throw Exception('Could not launch $_urlGoWorkik');
   }
 }
 

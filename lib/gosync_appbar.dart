@@ -95,11 +95,7 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
                 height: 90.0,
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text(
-                      // gocode
-                      // goSyncTitle,
-                      // "sosync";
-                      AppLocalizations.of(context)!.title),
+                  child: Text(AppLocalizations.of(context)!.title),
                   // install golang and geth
                 )),
             Tab(
@@ -117,16 +113,16 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
         actions: <Widget>[
           // Icon(Icons.search),
           PopupMenuButton<String>(
-            icon: const Icon(Icons.lunch_dining), //verticle menu
+            icon: const Icon(Icons.lunch_dining), //vertical menu
             onSelected: onSelect,
-            color: Colors.yellowAccent,
+            // color: Colors.yellowAccent,
             itemBuilder: (BuildContext context) => [
               PopupMenuItem(
                   value: "Home",
                   child: Linkify(
                       onOpen: (link) async {
-                        if (await canLaunch(link.url)) {
-                          await launch(link.url);
+                        if (await canLaunchUrl(link.url as Uri)) {
+                          await launchUrl(link.url as Uri);
                         } else {
                           throw 'Could not launch $link';
                         }
@@ -140,8 +136,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
               PopupMenuItem(
                 child: Linkify(
                     onOpen: (link) async {
-                      if (await canLaunch(link.url)) {
-                        await launch(link.url);
+                      if (await canLaunchUrl(link.url as Uri)) {
+                        await launchUrl(link.url as Uri);
                       } else {
                         throw 'Could not launch $link';
                       }
@@ -153,8 +149,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
               PopupMenuItem(
                 child: Linkify(
                     onOpen: (link) async {
-                      if (await canLaunch(link.url)) {
-                        await launch(link.url);
+                      if (await canLaunchUrl(link.url as Uri)) {
+                        await launchUrl(link.url as Uri);
                       } else {
                         throw 'Could not launch $link';
                       }
@@ -166,8 +162,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
               PopupMenuItem(
                 child: Linkify(
                     onOpen: (link) async {
-                      if (await canLaunch(link.url)) {
-                        await launch(link.url);
+                      if (await canLaunchUrl(link.url as Uri)) {
+                        await launchUrl(link.url as Uri);
                       } else {
                         throw 'Could not launch $link';
                       }
@@ -177,8 +173,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
               PopupMenuItem(
                 child: Linkify(
                     onOpen: (link) async {
-                      if (await canLaunch(link.url)) {
-                        await launch(link.url);
+                      if (await canLaunchUrl(link.url as Uri)) {
+                        await launchUrl(link.url as Uri);
                       } else {
                         throw 'Could not launch $link';
                       }
@@ -191,8 +187,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
               PopupMenuItem(
                 child: Linkify(
                     onOpen: (link) async {
-                      if (await canLaunch(link.url)) {
-                        await launch(link.url);
+                      if (await canLaunchUrl(link.url as Uri)) {
+                        await launchUrl(link.url as Uri);
                       } else {
                         throw 'Could not launch $link';
                       }
@@ -214,8 +210,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
               PopupMenuItem(
                 child: Linkify(
                     onOpen: (link) async {
-                      if (await canLaunch(link.url)) {
-                        await launch(link.url);
+                      if (await canLaunchUrl(link.url as Uri)) {
+                        await launchUrl(link.url as Uri);
                       } else {
                         throw 'Could not launch $link';
                       }
