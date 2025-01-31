@@ -348,6 +348,7 @@ class GoSyncNavDrawer extends StatelessWidget {
             ],
           ),
           ExpansionTile(
+            initiallyExpanded: true,
             title: const Text(
               "go commands",
               textAlign: TextAlign.center,
@@ -359,6 +360,32 @@ class GoSyncNavDrawer extends StatelessWidget {
             ), //add icon
             childrenPadding: const EdgeInsets.only(left: 30), //children padding
             children: [
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.code,
+                    color: Colors.pink,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'go standard library',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.teal),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'library commands',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.pink),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.codeCompare,
+                      color: Colors.green),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    // _launchYouTube();
+                    _launchGoStandardLibrary();
+                  }),
               ListTile(
                   leading: const Icon(
                     // Icons.tv,
@@ -384,6 +411,32 @@ class GoSyncNavDrawer extends StatelessWidget {
                     // Navigator.of(context).pop();
                     // _launchYouTube();
                     _launchGoCommands();
+                  }),
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.code,
+                    color: Colors.pink,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'pkg.go.dev/cmd/go    \ngo <command> [arguments]',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.teal),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'Go is a tool for managing Go source code. \nUse "go help <command>" for more information about a command.',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.pink),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.codeCompare,
+                      color: Colors.green),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    // _launchYouTube();
+                    _launchPkgGoDevGo();
                   }),
               // list tile 5 deep link XTwitter
               // list tile 5 deep link youtube
@@ -2330,14 +2383,46 @@ Future<void> _launchGoGDG() async {
   }
 }
 
-// _launchPkgGoDev
-final Uri _urlPkgGoDev = Uri.parse('https://pkg.go.dev/');
+// // _launchPkgGoDevStandardLibrary
+// final Uri _urlPkgGoDev = Uri.parse('https://pkg.go.dev/go');
+
+// Future<void> _launchPkgGoDevGo() async {
+//   debugPrint("customer left app to pkg.go.dev/go");
+//   print(TimeOfDay.now());
+//   if (!await launchUrl(_urlPkgGoDevGo)) {
+//     throw Exception('Could not launch $_urlPkgGoDevGo');
+//   }
+// }
+
+// _launchPkgGoDevGo
+final Uri _urlPkgGoDev = Uri.parse('https://pkg.go.dev');
 
 Future<void> _launchPkgGoDev() async {
-  debugPrint("customer left app to pkg.go.dev");
+  debugPrint("customer left app to pkg.go.dev/");
   print(TimeOfDay.now());
   if (!await launchUrl(_urlPkgGoDev)) {
     throw Exception('Could not launch $_urlPkgGoDev');
+  }
+}
+
+final Uri _urlPkgGoDevGo = Uri.parse('https://pkg.go.dev/cmd/go');
+
+Future<void> _launchPkgGoDevGo() async {
+  debugPrint("customer left app to pkg.go.dev/go");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlPkgGoDevGo)) {
+    throw Exception('Could not launch $_urlPkgGoDevGo');
+  }
+}
+
+// GoStandardlibrary
+final Uri _urlGoStandardLibrary = Uri.parse('https://pkg.go.dev/std');
+
+Future<void> _launchGoStandardLibrary() async {
+  debugPrint("customer left app to go go pkg std library");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoStandardLibrary)) {
+    throw Exception('Could not launch $_urlGoStandardLibrary');
   }
 }
 
@@ -2492,6 +2577,14 @@ Future<void> _launchGoCommands() async {
     throw Exception('Could not launch $_urlGoCommands');
   }
 }
+
+// Future<void> _launchGoCommands() async {
+//   debugPrint("customer left app to go github");
+//   print(TimeOfDay.now());
+//   if (!await launchUrl(_urlGoCommands)) {
+//     throw Exception('Could not launch $_urlGoCommands');
+//   }
+// }
 
 final Uri _urlVisualStudioCode = Uri.parse('https://code.visualstudio.com/');
 

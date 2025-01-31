@@ -12,6 +12,10 @@ import './gosync_text.dart';
 import './gosync_scrollbar0.dart';
 import './gosync_scrollbar1.dart';
 import './gosync_scrollbar2.dart';
+import './gosync_windows_install.dart';
+import './gosync_apple_install.dart';
+import './gosync_linux_install.dart';
+import './gosync_uninstall.dart';
 
 void main() {
   runApp(const GoSync());
@@ -49,14 +53,18 @@ class GoSync extends StatelessWidget {
       // ),
       initialRoute: '/',
       routes: {
-        // '/': (context) => const MaterialApp(),
         '/home': (BuildContext context) => const GoSyncHome(title: goSyncTitle),
+        '/appbar': (BuildContext context) => const GoSyncAppBar(),
         '/about': (BuildContext context) => const GoSyncAbout(),
         '/scrollbar0': (BuildContext context) => const GoSyncScrollbar0(),
         '/scrollbar1': (BuildContext context) => const GoSyncScrollbar1(),
         '/scrollbar2': (BuildContext context) => const GoSyncScrollbar2(),
         '/navdrawer': (BuildContext context) => const GoSyncNavDrawer(),
-        '/appbar': (BuildContext context) => const GoSyncAppBar(),
+        '/windowsInstall': (BuildContext context) =>
+            const GoSyncWindowsInstall(),
+        '/appleInstall': (BuildContext context) => const GoSyncAppleInstall(),
+        '/linuxInstall': (BuildContext context) => const GoSyncLinuxInstall(),
+        '/uninstall': (BuildContext context) => const GoSyncUninstall(),
       },
       localizationsDelegates: const [
         AppLocalizations.delegate,
