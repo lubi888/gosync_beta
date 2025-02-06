@@ -394,39 +394,13 @@ class GoSyncNavDrawer extends StatelessWidget {
                   ),
                   title: const Text(
                     // 'add eth|etc address - acccount',
-                    'go cli common commands',
-                    // AppLocalizations.of(context)!.visitGoDevPlay,
-                    style: TextStyle(color: Colors.teal),
-                  ),
-                  subtitle: const Text(
-                    // 'https://play.golang.com/',
-                    'cli command line interface',
-                    // https://go.dev/play/
-                    style: TextStyle(
-                        fontStyle: FontStyle.italic, color: Colors.pink),
-                  ),
-                  trailing: const Icon(FontAwesomeIcons.codeCompare,
-                      color: Colors.green),
-                  onTap: () {
-                    // Navigator.of(context).pop();
-                    // _launchYouTube();
-                    _launchGoCommands();
-                  }),
-              ListTile(
-                  leading: const Icon(
-                    // Icons.tv,
-                    FontAwesomeIcons.code,
-                    color: Colors.pink,
-                  ),
-                  title: const Text(
-                    // 'add eth|etc address - acccount',
                     'pkg.go.dev/cmd/go    \ngo <command> [arguments]',
                     // AppLocalizations.of(context)!.visitGoDevPlay,
                     style: TextStyle(color: Colors.teal),
                   ),
                   subtitle: const Text(
                     // 'https://play.golang.com/',
-                    'Go is a tool for managing Go source code. \nUse "go help <command>" for more information about a command.',
+                    'go is a tool for managing Go source code. \nUse "go help <command>" for more information about a command.',
                     // https://go.dev/play/
                     style: TextStyle(
                         fontStyle: FontStyle.italic, color: Colors.pink),
@@ -438,8 +412,110 @@ class GoSyncNavDrawer extends StatelessWidget {
                     // _launchYouTube();
                     _launchPkgGoDevGo();
                   }),
-              // list tile 5 deep link XTwitter
-              // list tile 5 deep link youtube
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.code,
+                    color: Colors.pink,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'go env environment check.',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.teal),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'print Go environment information \ncheck go install directoris setup and environment variables',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.pink),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.codeCompare,
+                      color: Colors.green),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    // _launchYouTube();
+                    _launchGoEnv();
+                  }),
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.code,
+                    color: Colors.pink,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'go path',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.teal),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'print and change GOPATH environment variable',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.pink),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.codeCompare,
+                      color: Colors.green),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    // _launchYouTube();
+                    _launchGoPath();
+                  }),
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.code,
+                    color: Colors.pink,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'go build',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.teal),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'compile packages and dependencies',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.pink),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.codeCompare,
+                      color: Colors.green),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    // _launchYouTube();
+                    _launchGoBuild();
+                  }),
+              ListTile(
+                  leading: const Icon(
+                    // Icons.tv,
+                    FontAwesomeIcons.code,
+                    color: Colors.pink,
+                  ),
+                  title: const Text(
+                    // 'add eth|etc address - acccount',
+                    'go run',
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
+                    style: TextStyle(color: Colors.teal),
+                  ),
+                  subtitle: const Text(
+                    // 'https://play.golang.com/',
+                    'go run main.go application',
+                    // https://go.dev/play/
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic, color: Colors.pink),
+                  ),
+                  trailing: const Icon(FontAwesomeIcons.codeCompare,
+                      color: Colors.green),
+                  onTap: () {
+                    // Navigator.of(context).pop();
+                    // _launchYouTube();
+                    _launchGoRun();
+                  }),
             ],
           ),
           // expansion tile install levels
@@ -2568,13 +2644,47 @@ Future<void> _launchGoBlog() async {
   }
 }
 
-final Uri _urlGoCommands = Uri.parse('https://pkg.go.dev/cmd');
+final Uri _urlGoEnv =
+    Uri.parse('https://pkg.go.dev/cmd/go#hdr-Print_Go_environment_information');
 
-Future<void> _launchGoCommands() async {
-  debugPrint("customer left app to go github");
+Future<void> _launchGoEnv() async {
+  debugPrint("customer left app to go Env");
   print(TimeOfDay.now());
-  if (!await launchUrl(_urlGoCommands)) {
-    throw Exception('Could not launch $_urlGoCommands');
+  if (!await launchUrl(_urlGoEnv)) {
+    throw Exception('Could not launch $_urlGoEnv');
+  }
+}
+
+final Uri _urlGoPath =
+    Uri.parse('https://pkg.go.dev/cmd/go#hdr-GOPATH_environment_variable');
+
+Future<void> _launchGoPath() async {
+  debugPrint("customer left app to goPath");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoPath)) {
+    throw Exception('Could not launch $_urlGoPath');
+  }
+}
+
+final Uri _urlGoBuild = Uri.parse(
+    'https://pkg.go.dev/cmd/go#hdr-Compile_packages_and_dependencies');
+
+Future<void> _launchGoBuild() async {
+  debugPrint("customer left app to goRun");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoBuild)) {
+    throw Exception('Could not launch $_urlGoBuild');
+  }
+}
+
+final Uri _urlGoRun =
+    Uri.parse('https://pkg.go.dev/cmd/go#hdr-Compile_and_run_Go_program');
+
+Future<void> _launchGoRun() async {
+  debugPrint("customer left app to goRun");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoRun)) {
+    throw Exception('Could not launch $_urlGoRun');
   }
 }
 
