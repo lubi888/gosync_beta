@@ -62,7 +62,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
         // elevation/: 30.0,
         title: Text(
           // goSyncTitle,
-          AppLocalizations.of(context)!.titledate,
+          // "title is today",
+          AppLocalizations.of(context)!.title,
           textAlign: TextAlign.center,
           style: const TextStyle(
             // backgroundColor: Color.fromARGB(255, 207, 160, 17),
@@ -115,7 +116,7 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
           PopupMenuButton<String>(
             icon: const Icon(Icons.lunch_dining), //vertical menu
             onSelected: onSelect,
-            // color: Colors.yellowAccent,
+            // color: Colors.red,.
             itemBuilder: (BuildContext context) => [
               PopupMenuItem(
                   value: "Home",

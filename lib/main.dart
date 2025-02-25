@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 // for root bundle
 // import 'package:json_theme/json_theme.dart';
 // import 'dart:convert'; // json decode
@@ -28,29 +29,30 @@ class GoSync extends StatelessWidget {
     return MaterialApp(
       title: goSyncTitle,
       // theme: ThemeData(),
-      // theme: ThemeData(
-      //   // This is the theme of your application.
-      //   useMaterial3: true,
-      //
-      //   colorScheme: ColorScheme.fromSeed(
-      //     seedColor: Colors.purple,
-      //     // ···
-      //     brightness: Brightness.dark,
-      //   ),
-      //   textTheme: TextTheme(
-      //     displayLarge: const TextStyle(
-      //       fontSize: 72,
-      //       fontWeight: FontWeight.bold,
-      //     ),
-      //     // ···
-      //     titleLarge: GoogleFonts.oswald(
-      //       fontSize: 30,
-      //       fontStyle: FontStyle.italic,
-      //     ),
-      //     bodyMedium: GoogleFonts.merriweather(),
-      //     displaySmall: GoogleFonts.pacifico(),
-      //   ),
-      // ),
+      theme: ThemeData(
+        // This is the theme of your application.
+        useMaterial3: true,
+
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.purple,
+          // ···
+          brightness: Brightness.dark,
+        ),
+        textTheme: TextTheme(
+          displayLarge: const TextStyle(
+            fontSize: 72,
+            fontWeight: FontWeight.bold,
+          ),
+          // ···
+          titleLarge: GoogleFonts.oswald(
+            fontSize: 30,
+            fontStyle: FontStyle.italic,
+          ),
+          bodyMedium: GoogleFonts.merriweather(),
+          displaySmall: GoogleFonts.pacifico(),
+        ),
+      ),
+      // darkTheme: ThemeData.dark(),
       initialRoute: '/',
       routes: {
         '/home': (BuildContext context) => const GoSyncHome(title: goSyncTitle),
