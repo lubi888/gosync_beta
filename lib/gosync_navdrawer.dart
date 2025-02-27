@@ -3,6 +3,10 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
+import './main.dart';
+import './gosync_appbar.dart';
+import './gosync_scrollbar0.dart';
+import './gosync_scrollbar1.dart';
 import './gosync_scrollbar2.dart';
 
 // import 'package:json_theme/json_theme.dart';
@@ -23,6 +27,9 @@ const String _kAsset4 = 'assets/images/gethTerm.png';
 
 class GoSyncNavDrawer extends StatelessWidget {
   const GoSyncNavDrawer({super.key});
+
+  // bool _value = false;
+  // get _value => _value;
   @override
   Widget build(BuildContext context) {
     debugPrint('navdrawer opened at [time]');
@@ -101,23 +108,33 @@ class GoSyncNavDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, '/');
                   }),
-              SwitchListTile(
-                secondary: const Icon(
-                  Icons.color_lens_outlined,
-                  color: Colors.yellow,
-                ),
-                title: const Text(
-                  'theme selection',
-                  style: TextStyle(color: Colors.red),
-                ),
-                subtitle: const Text(
-                  'theme subtitle selection. switch this to alternate between light and dark theme',
-                  style: TextStyle(color: Colors.yellow),
-                ),
-                // value: _toggled,
-                value: false,
-                onChanged: (bool? value) {},
-              ),
+              // SwitchListTile(
+              //     // bool _value = false;
+              //     secondary: const Icon(
+              //       Icons.color_lens_outlined,
+              //       color: Colors.yellow,
+              //     ),
+              //     title: const Text(
+              //       'theme selection',
+              //       style: TextStyle(color: Colors.red),
+              //     ),
+              //     subtitle: const Text(
+              //       'theme subtitle selection. switch this to alternate between light and dark theme',
+              //       style: TextStyle(color: Colors.yellow),
+              //     ),
+              //     // value: _toggled,
+              //     value: _value,
+              //     // onChanged: (bool? value) {},
+              //     onChanged: (value) {
+              //       SetState(()
+              //       {
+              //         _value = value;
+              //         if (_value)
+              //         GoSync.of(context)!.changeTheme(ThemeMode.light));
+              //         else
+              //           GoSync.of(context)!.changeTheme(ThemeMode.dark);
+              //       });
+              //     },),
               //2nd attempt
               const ListTile(
                 isThreeLine: true,
