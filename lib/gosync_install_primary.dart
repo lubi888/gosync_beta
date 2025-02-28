@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';
+// import 'package:flutter_localization/flutter_localization.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import './gosync_navdrawer.dart';
 import './gosync_text.dart';

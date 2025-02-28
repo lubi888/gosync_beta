@@ -22,36 +22,12 @@ void main() {
   runApp(const GoSync());
 }
 
-class GoSync extends StatefulWidget {
+class GoSync extends StatelessWidget {
   const GoSync({super.key});
-  @override
-  State<GoSync> createState() => _GoSyncState();
-  // static const String _title = 'GoSync';
-  static State<GoSync>? of(BuildContext context) =>
-      context.findAncestorStateOfType<_GoSyncState>();
-}
-
-class _GoSyncState extends State<GoSync> {
-  // int _selectedIndex = 0;
-  // void _onItemTapped(int index) {
-  //   setState(() {
-  //     _selectedIndex = index;
-  //   });
-  // }
-  ThemeMode _themeMode = ThemeMode.light;
-  void changeTheme(ThemeMode themeMode) {
-    setState(() {
-      _themeMode = themeMode;
-    });
-  }
-
-  bool _value = false;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: goSyncTitle,
-      themeMode: _themeMode,
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
@@ -75,7 +51,7 @@ class _GoSyncState extends State<GoSync> {
       darkTheme: ThemeData(useMaterial3: true, brightness: Brightness.dark),
       // themeMode: ThemeMode.light,
       // themeMode: ThemeMode.dark,
-      // themeMode: ThemeMode.system,
+      themeMode: ThemeMode.system,
       initialRoute: '/',
       routes: {
         '/home': (BuildContext context) => const GoSyncHome(title: goSyncTitle),

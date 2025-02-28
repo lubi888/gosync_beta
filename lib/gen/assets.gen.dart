@@ -27,11 +27,11 @@ class $AssetsFontsGen {
 
   /// List of all assets
   List<String> get values => [
-        alluraRegular,
-        notoSansRegular,
-        notoSansThin,
-        notoSansEgyptianHieroglyphsRegular
-      ];
+    alluraRegular,
+    notoSansRegular,
+    notoSansThin,
+    notoSansEgyptianHieroglyphsRegular,
+  ];
 }
 
 class $AssetsImagesGen {
@@ -270,67 +270,67 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        goLogoFuchsia,
-        aKAsset2,
-        aKAsset32,
-        bleachBitSwap,
-        blockchainSize,
-        devcon1,
-        duIcon,
-        etcBullet,
-        etcethAsia,
-        ethBullet,
-        ethGreenHelp,
-        ethStackExchange,
-        ethSync,
-        ethereumWebXi,
-        ethereumYoutube,
-        ethsyncCompleteClosed,
-        footerGopher,
-        gethBlockchainP2p,
-        gethCommandHelp,
-        gethHelp1,
-        gethHelp2,
-        gethHelp3,
-        gethHelp4,
-        gethHelp5,
-        gethHelp6,
-        gethInstallHelp,
-        gethSyncmodeBegin,
-        gethWeb,
-        geth1win,
-        geth2win,
-        gethTerm,
-        gethdlOs,
-        githubGoEthereumList,
-        go3FoldersCopy,
-        go3Folders,
-        goBuildInstallCopy,
-        goBuildInstall,
-        goBuildRunLocalCopy,
-        goBuildRunLocal,
-        goDownloadWebsite,
-        goEnvCopy,
-        goEnv,
-        goHelloCopy,
-        goHello,
-        goHelp1Copy,
-        goHelp1,
-        goHelp2Copy,
-        goHelp2,
-        goInstallSystemwide,
-        golangDevelopers,
-        icLauncher,
-        krakenEthEur,
-        loading,
-        logo,
-        logoCli,
-        logoHyg,
-        splash,
-        wallpaperHomesteadSmall,
-        wallpaperHomestead,
-        whichGethList
-      ];
+    goLogoFuchsia,
+    aKAsset2,
+    aKAsset32,
+    bleachBitSwap,
+    blockchainSize,
+    devcon1,
+    duIcon,
+    etcBullet,
+    etcethAsia,
+    ethBullet,
+    ethGreenHelp,
+    ethStackExchange,
+    ethSync,
+    ethereumWebXi,
+    ethereumYoutube,
+    ethsyncCompleteClosed,
+    footerGopher,
+    gethBlockchainP2p,
+    gethCommandHelp,
+    gethHelp1,
+    gethHelp2,
+    gethHelp3,
+    gethHelp4,
+    gethHelp5,
+    gethHelp6,
+    gethInstallHelp,
+    gethSyncmodeBegin,
+    gethWeb,
+    geth1win,
+    geth2win,
+    gethTerm,
+    gethdlOs,
+    githubGoEthereumList,
+    go3FoldersCopy,
+    go3Folders,
+    goBuildInstallCopy,
+    goBuildInstall,
+    goBuildRunLocalCopy,
+    goBuildRunLocal,
+    goDownloadWebsite,
+    goEnvCopy,
+    goEnv,
+    goHelloCopy,
+    goHello,
+    goHelp1Copy,
+    goHelp1,
+    goHelp2Copy,
+    goHelp2,
+    goInstallSystemwide,
+    golangDevelopers,
+    icLauncher,
+    krakenEthEur,
+    loading,
+    logo,
+    logoCli,
+    logoHyg,
+    splash,
+    wallpaperHomesteadSmall,
+    wallpaperHomestead,
+    whichGethList,
+  ];
 }
 
 class $AssetsThemesGen {
@@ -362,18 +362,18 @@ class $AssetsThemesGen {
 
   /// List of all assets
   List<String> get values => [
-        appainterTheme,
-        appainterTheme3,
-        appainterThemeDark,
-        appainterThemeDarkGreen,
-        appainterThemeDarkGreen2,
-        appainterThemeGreen,
-        appainterThemeSeedMint
-      ];
+    appainterTheme,
+    appainterTheme3,
+    appainterThemeDark,
+    appainterThemeDarkGreen,
+    appainterThemeDarkGreen2,
+    appainterThemeGreen,
+    appainterThemeSeedMint,
+  ];
 }
 
 class Assets {
-  Assets._();
+  const Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
@@ -381,11 +381,7 @@ class Assets {
 }
 
 class AssetGenImage {
-  const AssetGenImage(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  });
+  const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
 
   final String _assetName;
 
@@ -413,7 +409,7 @@ class AssetGenImage {
     bool gaplessPlayback = true,
     bool isAntiAlias = false,
     String? package,
-    FilterQuality filterQuality = FilterQuality.low,
+    FilterQuality filterQuality = FilterQuality.medium,
     int? cacheWidth,
     int? cacheHeight,
   }) {
@@ -445,15 +441,8 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({
-    AssetBundle? bundle,
-    String? package,
-  }) {
-    return AssetImage(
-      _assetName,
-      bundle: bundle,
-      package: package,
-    );
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
   String get path => _assetName;
